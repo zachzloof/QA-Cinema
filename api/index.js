@@ -23,9 +23,9 @@ app.post("/processLogin", function(req, res) {
     let pass = req.body.password;
     db.query(`SELECT * FROM users WHERE username = '${req.body.username}'`, function(err, results) {
         console.log(results)
-        if (results != Array) {
+        if (results.length != 1) {
             console.log(`username is wrong, please try again`);
-            res.redirect("http://localhost:3000/login");
+            res.redirect("http://localhost:3000/login/baduser");
             res.end()
         } else if (results[0].password == pass) {
             user = req.body.username;
@@ -34,11 +34,21 @@ app.post("/processLogin", function(req, res) {
             res.end()
         } else {
             console.log(`password is wrong, please try again`);
-            res.redirect("http://localhost:3000/login");
+            res.redirect("http://localhost:3000/login/badpass");
             res.end()
         }
     });
     
+})
+
+app.post("/registerUser", function(req, res) {
+    let username = req.body.username;
+    let pass = req.body.password;
+    db.query(`INSERT INTO users (username, password) VALUES ("${username}", "${pass}")`, function(err, results) {
+    
+    });
+    res.redirect("http://localhost:3000/login")
+    res.end()
 })
 
 app.listen(4005);

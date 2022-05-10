@@ -1,5 +1,3 @@
-import {Link} from 'react-router-dom'
-
 function Login() {
     return (
         <div>
@@ -12,7 +10,11 @@ function Login() {
         Password:<input type="password" name="password"/> <br/>               
         <input type="submit"/>
         </form>
-         
+
+        <h4>Dont have an account with us? Register here!</h4>
+        <form action="http://localhost:3000/register">
+        <button>REGISTER</button>
+        </form>
         
          
         
