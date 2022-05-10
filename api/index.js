@@ -4,8 +4,10 @@ let mysql = require("mysql");
 let app=express();
 let user;
 
-app.use(bodyparser.json())
-app.use(bodyparser.urlencoded({extended: true}))
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended: true}));
+
+app.use(function(req, res, next) { res.header("Access-Control-Allow-Origin", "*"); res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"); next(); });
 
 let db = mysql.createConnection(
     {
@@ -50,5 +52,10 @@ app.post("/registerUser", function(req, res) {
     res.redirect("http://localhost:3000/login")
     res.end()
 })
+
+app.get("/getComments", function(req, res) {
+    db.query(`SELECT * FROM comments`, function(err, results) {
+        res.send(results)
+})});
 
 app.listen(4005);
