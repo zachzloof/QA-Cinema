@@ -88,4 +88,13 @@ app.get("/newDislike/:x/:y", function (req, res) {
     res.end()
 });
 
+app.get("/booking", function (req, res) {
+    let x = parseInt(req.params.x);
+    let y = parseInt(req.params.y);
+    db.query(`UPDATE comments SET dislikes= ${x + 1} WHERE id = ${y}`, function (err, results) {
+    });
+    res.redirect("http://localhost:3000/discussionBoard")
+    res.end()
+});
+
 app.listen(4005);

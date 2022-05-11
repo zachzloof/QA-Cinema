@@ -1,10 +1,9 @@
 import React, {useState} from "react";
-import PayPal from './PayPal'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 function Payment() {
 
-    const cost = 150.00;
+     const cost = 150.00;
     const initialOptions = {
         "client-id": "AcLQTK_KwlpqzGOdZbh0lzld98nLQ_CizIixaDFqChJYecC5BExJ-6tiqu7XzZG0-eV8IJAydc8lSTgJ",
         currency: "GBP"
@@ -12,6 +11,7 @@ function Payment() {
     };
 
     return(
+        
             <PayPalScriptProvider options={initialOptions}>
                 <PayPalButtons style={{ color: "blue", layout: "horizontal", height: 48, tagline: false, shape: "pill" }} 
                 createOrder={(data, actions) => {
@@ -20,7 +20,7 @@ function Payment() {
                             {
                                 description: "Cinema tickets",
                                 amount: {
-                                    value: {cost}
+                                    value: cost
                                 }
                             }
                         ]
@@ -34,20 +34,8 @@ function Payment() {
                 }}
                 />
             </PayPalScriptProvider>
-        );
-
-
-
-        // <div>
-        //     {checkout ? (
-        //         <PayPal/>
-        //     ) : (
-        //         <button onClick={() => {
-        //             setCheckout(true);
-        //         }}>CHECKOUT</button>
             
-        //     )}
-        // </div>
+        );
     
 }
 

@@ -7,6 +7,7 @@ import BadPass from './BadPass';
 import Register from './Register';
 import DiscussionBoard from './DiscussionBoard';
 import Payment from './Payment';
+import Booking from './Booking'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route exact path="/payment"  element={<Payment />}/>
         <Route exact path="/"  element={<Login />}/>
         <Route exact path="/login" element={<Login />}/>
+        <Route exact path="/booking" element={<Booking />}/>
         <Route exact path="/login/baduser" element={<div><Login /><BadUser /></div>}/>
         <Route exact path="/login/badpass" element={<div><Login /><BadPass /></div>}/>
         <Route exact path="/register" element={<div><Register/></div>}/>
