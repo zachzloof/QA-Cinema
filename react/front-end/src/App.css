@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* Movies Listing */ 
+background{
+  color: darkslategray;
+}
+
+#movie-title{
+  color:cornflowerblue
+}
