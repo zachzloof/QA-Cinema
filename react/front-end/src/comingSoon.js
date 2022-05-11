@@ -24,7 +24,7 @@ export default function ComingSoon() {
           <Card.Body>
             <Card.Title>Jurassic World: Dominion</Card.Title>
             <Card.Text>
-            Four years after the destruction of Isla Nublar, dinosaurs now live--and hunt--alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history's most fearsome creatures in a new Era
+            Four years after the destruction of Isla Nublar, dinosaurs now live--and hunt--alongside humans all over the world.
             </Card.Text>
             <Button variant="primary">Preorder Now</Button>
           </Card.Body>
