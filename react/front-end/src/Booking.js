@@ -41,7 +41,6 @@ class Booking extends Component {
 
 
     saveData() {
-        alert(this.state.children + "works")
         axios.post("http://localhost:4005/processBooking", {
         children: this.state.children,
         student: this.state.student,
@@ -54,7 +53,6 @@ class Booking extends Component {
 
     render() {
         return (<div>
-            <button onClick={() => this.getData()}>DATA </button>
             <form onSubmit={this.saveData}>
             <input type="number" value={this.state.children} onChange={this.handleChangeChildren} placeholder="CHILDREN: £13.55"></input>
                  <input type="number" value={this.state.student} onChange={this.handleChangeStudent} placeholder="STUDENT: £15.50" ></input>

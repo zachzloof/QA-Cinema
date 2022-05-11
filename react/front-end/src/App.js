@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route exact path="/payment"  element={<Payment />}/>
+        <Route exact path="/payment"  element={<Payment />}/>
         <Route exact path="/"  element={<Login />}/>
         <Route exact path="/login" element={<Login />}/>
         <Route exact path="/booking" element={<Booking />}/>

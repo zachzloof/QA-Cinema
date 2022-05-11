@@ -43,18 +43,38 @@ app.post("/processLogin", function (req, res) {
 
 })
 
+app.post("/processBooking", function (req, res) {
+    let children = parseInt(req.body.children);
+    let students = parseInt(req.body.student);
+    let adults = parseInt(req.body.adult);
+    console.log(children);
+    console.log(students);
+    console.log(adults);
+    let price= (adults * 17.99) + (students * 15.50) + (children * 13.55);
+    db.query(`INSERT INTO payments (user, cost, children, students, adults, status) VALUES ("${user}", ${price}, ${children}, ${students}, ${adults}, "PAID")`, function (err, results) {
+        
+        res.redirect("http://localhost:3000/payment");
+    });
+   
+})
+
 app.post("/registerUser", function (req, res) {
     let username = req.body.username;
     let pass = req.body.password;
     db.query(`INSERT INTO users (username, password) VALUES ("${username}", "${pass}")`, function (err, results) {
-
+        
     });
     res.redirect("http://localhost:3000/login")
-    res.end()
 })
 
 app.get("/getComments", function (req, res) {
     db.query(`SELECT * FROM comments`, function (err, results) {
+        res.send(results)
+    })
+});
+
+app.get("/getPrice", function (req, res) {
+    db.query(`SELECT * FROM payments ORDER BY id DESC LIMIT 1`, function (err, results) {
         res.send(results)
     })
 });
@@ -66,7 +86,6 @@ app.post("/processComment/:x", function (req, res) {
 
     });
     res.redirect("http://localhost:3000/discussionBoard")
-    res.end()
 });
 
 
@@ -76,7 +95,6 @@ app.get("/newLike/:x/:y", function (req, res) {
     db.query(`UPDATE comments SET likes=${x + 1} WHERE id = ${y}`, function (err, results) {
     });
     res.redirect("http://localhost:3000/discussionBoard")
-    res.end()
 });
 
 app.get("/newDislike/:x/:y", function (req, res) {
@@ -85,7 +103,6 @@ app.get("/newDislike/:x/:y", function (req, res) {
     db.query(`UPDATE comments SET dislikes= ${x + 1} WHERE id = ${y}`, function (err, results) {
     });
     res.redirect("http://localhost:3000/discussionBoard")
-    res.end()
 });
 
 app.get("/booking", function (req, res) {
@@ -94,7 +111,6 @@ app.get("/booking", function (req, res) {
     db.query(`UPDATE comments SET dislikes= ${x + 1} WHERE id = ${y}`, function (err, results) {
     });
     res.redirect("http://localhost:3000/discussionBoard")
-    res.end()
 });
 
 app.listen(4005);
