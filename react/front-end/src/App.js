@@ -6,6 +6,11 @@ import BadUser from './BadUser';
 import BadPass from './BadPass';
 import Register from './Register';
 import DiscussionBoard from './DiscussionBoard';
+import Movie from './Components/Movie';
+
+// Movie listing section
+
+
 
 function App() {
   return (
@@ -17,6 +22,8 @@ function App() {
         <Route exact path="/login/badpass" element={<div><Login /><BadPass /></div>}/>
         <Route exact path="/register" element={<div><Register/></div>}/>
         <Route exact path="/discussionBoard" element={<div><DiscussionBoard/></div>}/>
+        <Route exact path="/listings" element={<div><Movie/></div>}/>
+
         </Routes>
     </Router>
   );
