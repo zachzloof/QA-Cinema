@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Login from './Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -10,6 +10,8 @@ import Payment from './Payment';
 import HomePage from './homePage';
 import Booking from './Booking';
 import NavBar from './Navigation/Navbar'
+import OpeningTimes from './OpeningTimes'
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       <Route exact path="/payment/:id"  element={<div><NavBar/><Payment /></div>}/>
         <Route exact path="/"  element={<div><NavBar/><HomePage /></div>}/>
         <Route exact path="/login" element={<div><NavBar/><Login /></div>}/>
+        <Route exact path="/openingTimes" element={<div><NavBar/><OpeningTimes /></div>}/>
         <Route exact path="/booking" element={<div><NavBar/><Booking /></div>}/>
         <Route exact path="/login/baduser" element={<div><NavBar/><Login /><BadUser /></div>}/>
         <Route exact path="/login/badpass" element={<div><NavBar/><Login /><BadPass /></div>}/>
