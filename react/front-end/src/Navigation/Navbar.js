@@ -31,7 +31,10 @@ function Navbar() {
           <div className="menu">
             <li className="search-box">
               <i className="bx bx-search icon"></i>
-              <input type="text" placeholder="Search Term" />
+              <form action="http://localhost:4005/search" method="post">
+              <input type="text" name="input" placeholder="Search Term" />
+              <button onClick="submit">SEARCH</button>
+              </form>
             </li>
 
             <ul className="menu-links">

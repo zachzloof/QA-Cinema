@@ -73,6 +73,12 @@ app.get("/getComments", function (req, res) {
     })
 });
 
+app.post("/search", function (req, res) {
+    let movie = req.body.input;
+    console.log(movie);
+    res.redirect(`http://localhost:3000/search/${movie}`)}
+);
+
 app.post("/getPrice", function (req, res) {
     let id = req.body.id;
     db.query(`SELECT * FROM payments WHERE id=${id}`, function (err, results) {
