@@ -30,10 +30,10 @@ const Booking = () => {
 
     return (<div style={{textAlign: "center"}}>
         <form onSubmit={saveData}>
-            <input type="number" value={children} onChange={(e)=> setChildren(e.target.value)} placeholder="CHILDREN: £13.55" />
-            <input type="number" value={student} onChange={(e)=> setStudent(e.target.value)} placeholder="STUDENT: £15.50" />
-            <input type="number" value={adult} onChange={(e)=> setAdult(e.target.value)} placeholder="ADULT: 17.99" />
-            <input type="submit" />
+            Children tickets £13.55: <input type="number" value={children} onChange={(e)=> setChildren(e.target.value)} placeholder="CHILDREN: £13.55" /> <br/>
+            Student tickets: £15.50<input type="number" value={student} onChange={(e)=> setStudent(e.target.value)} placeholder="STUDENT: £15.50" />   <br/>
+            Adult: £17.99<input type="number" value={adult} onChange={(e)=> setAdult(e.target.value)} placeholder="ADULT: 17.99" />  <br/>
+            <button>BOOK!</button>
         </form>
     </div>)
 
