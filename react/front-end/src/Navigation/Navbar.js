@@ -36,7 +36,7 @@ function Navbar() {
 
             <ul className="menu-links">
               <li className="nav-link">
-                <a href="#">
+                <a href="/">
                   <i className="bx bx-bar-chart-alt-2 icon"></i>
                   <span className="text nav-text">Home</span>
                 </a>
@@ -92,6 +92,12 @@ function Navbar() {
                 <a href="http://localhost:3000/classifications">
                   <i className="bx bx-wallet icon"></i>
                   <span className="text nav-text">Classifications</span>
+                </a>
+              </li>
+              <li className="nav-link">
+                <a href="http://localhost:3000/openingTimes">
+                  <i className="bx bx-wallet icon"></i>
+                  <span className="text nav-text">Opening Times</span>
                 </a>
               </li>
             </ul>
