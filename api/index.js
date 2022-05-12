@@ -28,16 +28,16 @@ app.post("/processLogin", function (req, res) {
         if (results.length != 1) {
             console.log(`username is wrong, please try again`);
             res.redirect("http://localhost:3000/login/baduser");
-            res.end()
+            res.end();
         } else if (results[0].password == pass) {
             user = req.body.username;
             console.log(`${user} is logged in`);
             res.redirect("http://localhost:3000/");
-            res.end()
+            res.end();
         } else {
             console.log(`password is wrong, please try again`);
             res.redirect("http://localhost:3000/login/badpass");
-            res.end()
+            res.end();
         }
     });
 
@@ -51,11 +51,11 @@ app.post("/processBooking", function (req, res) {
     console.log(students);
     console.log(adults);
     let price= (adults * 17.99) + (students * 15.50) + (children * 13.55);
-    db.query(`INSERT INTO payments (user, cost, children, students, adults, status) VALUES ("${user}", ${price}, ${children}, ${students}, ${adults}, "PAID")`, function (err, results) {
-        
-        res.redirect("http://localhost:3000/payment");
+    db.query(`INSERT INTO payments (user, cost, children, students, adults, status) VALUES ("${user}", ${price}, ${children}, ${students}, ${adults}, "PENDING")`, function (err, results) {
+        console.log(results.insertId);
+        res.status(201).send({id: results.insertId});
+       
     });
-   
 })
 
 app.post("/registerUser", function (req, res) {
@@ -73,10 +73,12 @@ app.get("/getComments", function (req, res) {
     })
 });
 
-app.get("/getPrice", function (req, res) {
-    db.query(`SELECT * FROM payments ORDER BY id DESC LIMIT 1`, function (err, results) {
+app.post("/getPrice", function (req, res) {
+    let id = req.body.id;
+    db.query(`SELECT * FROM payments WHERE id=${id}`, function (err, results) {
         res.send(results)
     })
+    
 });
 
 app.post("/processComment/:x", function (req, res) {
@@ -86,6 +88,17 @@ app.post("/processComment/:x", function (req, res) {
 
     });
     res.redirect("http://localhost:3000/discussionBoard")
+   
+});
+
+app.post("/putStatus", function (req, res) {
+    let status = req.body.status;
+    console.log(status);
+    db.query(`UPDATE payments SET status="${status}" ORDER BY id DESC LIMIT 1`, function (err, results) {
+
+    });
+    // res.redirect("http://localhost:3000/discussionBoard")
+    
 });
 
 
