@@ -7,14 +7,32 @@ function Contact() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-        emailjs.sendForm('service_xsd1f7m', 'template_t3nt2zr', form.current, '1jYw_FThaeEzl3l6g')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        // console.log(e)
+        // console.log(e.target)
+        // console.log(e.target[0].value)
+        let name = e.target[0].value;
+        let email = e.target[1].value;
+        let subject = e.target[2].value;
+        let body = e.target[3].value;
+        if (name == "") {
+            alert("PLEASE ENTER A NAME")
+        } else if (email == "") {
+            alert("PLEASE ENTER AN EMAIL")
+        } else if (subject == "") {
+            alert("PLEASE ENTER A SUBJECT")
+        } else if (body == "") {
+            alert("PLEASE ENTER A MESSAGE")
+        } else {
+            emailjs.sendForm('service_xsd1f7m', 'template_t3nt2zr', form.current, '1jYw_FThaeEzl3l6g')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+        }
     };
+
+
 
     return (
         <div style={{ textAlign: "center", marginLeft: "8%", merginRight: "auto" }}>
@@ -26,6 +44,8 @@ function Contact() {
                 <input type="text" name="user_name" /> <br />
                 <label>Email</label> <br />
                 <input type="email" name="user_email" /> <br />
+                <label>Subject</label> <br />
+                <input type="text" name="subject" /> <br />
                 <label>Message</label> <br />
                 <textarea name="message" /> <br />
                 <input type="submit" value="Send" />
