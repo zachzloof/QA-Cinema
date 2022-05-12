@@ -43,53 +43,53 @@ function Navbar() {
               </li>
 
               <li className="nav-link">
-                <a href="#">
+                <a href="http://localhost:3000/listings">
                   <i className="bx bx-bar-chart-alt-2 icon"></i>
                   <span className="text nav-text">Now Showing</span>
                 </a>
               </li>
 
               <li className="nav-link">
-                <a href="#">
+                <a href="http://localhost:3000/newReleases">
                   <i className="bx bx-bell icon"></i>
                   <span className="text nav-text">Upcomming</span>
                 </a>
               </li>
 
               <li className="nav-link">
-                <a href="#">
+                <a href="http://localhost:3000/booking">
                   <i className="bx bx-pie-chart-alt icon"></i>
                   <span className="text nav-text">Bookings</span>
                 </a>
               </li>
 
               <li className="nav-link">
-                <a href="#">
+                <a href="http://localhost:3000/placesToGo">
                   <i className="bx bx-heart icon"></i>
                   <span className="text nav-text">Places to go</span>
                 </a>
               </li>
 
               <li className="nav-link">
-                <a href="#">
+                <a href="http://localhost:3000/gettingThere">
                   <i className="bx bx-wallet icon"></i>
                   <span className="text nav-text">Getting there</span>
                 </a>
               </li>
               <li className="nav-link">
-                <a href="#">
+                <a href="http://localhost:3000/discussionBoard">
                   <i className="bx bx-wallet icon"></i>
                   <span className="text nav-text">Forum</span>
                 </a>
               </li>
               <li className="nav-link">
-                <a href="#">
+                <a href="http://localhost:3000/screens">
                   <i className="bx bx-wallet icon"></i>
                   <span className="text nav-text">Screens</span>
                 </a>
               </li>
               <li className="nav-link">
-                <a href="#">
+                <a href="http://localhost:3000/classifications">
                   <i className="bx bx-wallet icon"></i>
                   <span className="text nav-text">Classifications</span>
                 </a>
@@ -99,9 +99,9 @@ function Navbar() {
 
           <div className="bottom-content">
             <li className="">
-              <a href="#">
+              <a href="http://localhost:3000/login">
                 <i className="bx bx-log-out icon"></i>
-                <span className="text nav-text">Logout</span>
+                <span className="text nav-text">Login</span>
               </a>
             </li>
 

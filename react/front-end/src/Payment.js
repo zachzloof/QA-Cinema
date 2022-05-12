@@ -40,9 +40,9 @@ function Payment() {
     }
     
     return(
-            <div>
+            <div style={{textAlign: "center"}}>
             <PayPalScriptProvider options={initialOptions}>
-                <PayPalButtons style={{ color: "blue", layout: "horizontal", height: 48, tagline: false, shape: "pill" }} 
+                <PayPalButtons style={{ color: "blue", height: 48, width: 70, tagline: false, shape: "pill" }} 
                 createOrder={(data, actions) => {
                     return actions.order.create({
                         purchase_units: [

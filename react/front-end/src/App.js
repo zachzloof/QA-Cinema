@@ -7,18 +7,22 @@ import BadPass from './BadPass';
 import Register from './Register';
 import DiscussionBoard from './DiscussionBoard';
 import Payment from './Payment';
+import HomePage from './homePage';
+import Booking from './Booking';
+import NavBar from './Navigation/Navbar'
 
 function App() {
   return (
     <Router>
       <Routes>
-      <Route exact path="/payment"  element={<Payment />}/>
-        <Route exact path="/"  element={<Login />}/>
-        <Route exact path="/login" element={<Login />}/>
-        <Route exact path="/login/baduser" element={<div><Login /><BadUser /></div>}/>
-        <Route exact path="/login/badpass" element={<div><Login /><BadPass /></div>}/>
-        <Route exact path="/register" element={<div><Register/></div>}/>
-        <Route exact path="/discussionBoard" element={<div><DiscussionBoard/></div>}/>
+      <Route exact path="/payment/:id"  element={<div><NavBar/><Payment /></div>}/>
+        <Route exact path="/"  element={<div><NavBar/><HomePage /></div>}/>
+        <Route exact path="/login" element={<div><NavBar/><Login /></div>}/>
+        <Route exact path="/booking" element={<div><NavBar/><Booking /></div>}/>
+        <Route exact path="/login/baduser" element={<div><NavBar/><Login /><BadUser /></div>}/>
+        <Route exact path="/login/badpass" element={<div><NavBar/><Login /><BadPass /></div>}/>
+        <Route exact path="/register" element={<div><NavBar/><Register/></div>}/>
+        <Route exact path="/discussionBoard" element={<div><NavBar/><DiscussionBoard/></div>}/>
         </Routes>
     </Router>
   );

@@ -1,6 +1,6 @@
 function BadUser() {
     return (
-        <div>
+        <div style={{textAlign: "center"}}>
         <p style={{color: 'red'}}>
           THIS USERNAME DOES NOT EXIST... PLEASE REGISTER!
         </p>

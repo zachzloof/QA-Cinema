@@ -1,6 +1,6 @@
 function Register() {
     return (
-        <div>
+        <div style={{textAlign: "center"}}>
 
 
             <h1><u>CREATE NEW ACCOUNT WITH QA CINEMA</u></h1>

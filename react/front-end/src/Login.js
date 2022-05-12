@@ -1,6 +1,6 @@
 function Login() {
     return (
-        <div>
+        <div style={{textAlign: "center"}}>
 
  
         <h1><u>LOGIN PAGE</u></h1>

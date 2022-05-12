@@ -28,7 +28,7 @@ const Booking = () => {
     }
 
 
-    return (<div>
+    return (<div style={{textAlign: "center"}}>
         <form onSubmit={saveData}>
             <input type="number" value={children} onChange={(e)=> setChildren(e.target.value)} placeholder="CHILDREN: £13.55" />
             <input type="number" value={student} onChange={(e)=> setStudent(e.target.value)} placeholder="STUDENT: £15.50" />

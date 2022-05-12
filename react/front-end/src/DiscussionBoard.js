@@ -26,15 +26,15 @@ class DiscussionBoard extends Component {
         console.log(response.data)
         this.setState({ records: response.data })
     }
-
+    
     render() {
-        console.log(this.state.records)
-        return (<div>
+        // console.log(this.state.records)
+        return (<div style={{textAlign: "center"}}>
             <h1>QA CINEMA DISCUSSION BOARD!</h1>
             <div>
                 <h3>1.What is your favourite movie?</h3>
                 
-                <table>
+                <table style={{marginLeft: "auto", marginRight: "auto"}}>
                     {this.state.records.map((data) =>
                         (data.post == 1) &&
                         (<tr>
