@@ -28,35 +28,57 @@ app.post("/processLogin", function (req, res) {
         if (results.length != 1) {
             console.log(`username is wrong, please try again`);
             res.redirect("http://localhost:3000/login/baduser");
-            res.end()
+            res.end();
         } else if (results[0].password == pass) {
             user = req.body.username;
             console.log(`${user} is logged in`);
             res.redirect("http://localhost:3000/");
-            res.end()
+            res.end();
         } else {
             console.log(`password is wrong, please try again`);
             res.redirect("http://localhost:3000/login/badpass");
-            res.end()
+            res.end();
         }
     });
 
+})
+
+app.post("/processBooking", function (req, res) {
+    let children = parseInt(req.body.children);
+    let students = parseInt(req.body.student);
+    let adults = parseInt(req.body.adult);
+    console.log(children);
+    console.log(students);
+    console.log(adults);
+    let price= (adults * 17.99) + (students * 15.50) + (children * 13.55);
+    db.query(`INSERT INTO payments (user, cost, children, students, adults, status) VALUES ("${user}", ${price}, ${children}, ${students}, ${adults}, "PENDING")`, function (err, results) {
+        console.log(results.insertId);
+        res.status(201).send({id: results.insertId});
+       
+    });
 })
 
 app.post("/registerUser", function (req, res) {
     let username = req.body.username;
     let pass = req.body.password;
     db.query(`INSERT INTO users (username, password) VALUES ("${username}", "${pass}")`, function (err, results) {
-
+        
     });
     res.redirect("http://localhost:3000/login")
-    res.end()
 })
 
 app.get("/getComments", function (req, res) {
     db.query(`SELECT * FROM comments`, function (err, results) {
         res.send(results)
     })
+});
+
+app.post("/getPrice", function (req, res) {
+    let id = req.body.id;
+    db.query(`SELECT * FROM payments WHERE id=${id}`, function (err, results) {
+        res.send(results)
+    })
+    
 });
 
 app.post("/processComment/:x", function (req, res) {
@@ -66,7 +88,17 @@ app.post("/processComment/:x", function (req, res) {
 
     });
     res.redirect("http://localhost:3000/discussionBoard")
-    res.end()
+   
+});
+
+app.post("/putStatus", function (req, res) {
+    let status = req.body.status;
+    console.log(status);
+    db.query(`UPDATE payments SET status="${status}" ORDER BY id DESC LIMIT 1`, function (err, results) {
+
+    });
+    // res.redirect("http://localhost:3000/discussionBoard")
+    
 });
 
 
@@ -76,7 +108,6 @@ app.get("/newLike/:x/:y", function (req, res) {
     db.query(`UPDATE comments SET likes=${x + 1} WHERE id = ${y}`, function (err, results) {
     });
     res.redirect("http://localhost:3000/discussionBoard")
-    res.end()
 });
 
 app.get("/newDislike/:x/:y", function (req, res) {
@@ -85,7 +116,14 @@ app.get("/newDislike/:x/:y", function (req, res) {
     db.query(`UPDATE comments SET dislikes= ${x + 1} WHERE id = ${y}`, function (err, results) {
     });
     res.redirect("http://localhost:3000/discussionBoard")
-    res.end()
+});
+
+app.get("/booking", function (req, res) {
+    let x = parseInt(req.params.x);
+    let y = parseInt(req.params.y);
+    db.query(`UPDATE comments SET dislikes= ${x + 1} WHERE id = ${y}`, function (err, results) {
+    });
+    res.redirect("http://localhost:3000/discussionBoard")
 });
 
 app.listen(4005);

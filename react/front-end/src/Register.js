@@ -7,7 +7,7 @@ function Register() {
 
             <form action="http://localhost:4005/registerUser" method="post">
                 Username:<input name="username" /> <br />
-                Passwordd:<input name="password" type="password" /> <br />
+                Password:<input name="password" type="password" /> <br />
 
                 <input type="submit" />
             </form>
