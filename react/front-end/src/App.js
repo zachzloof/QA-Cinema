@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import Login from './Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BadUser from './BadUser';
@@ -11,12 +11,14 @@ import HomePage from './homePage';
 import Booking from './Booking';
 import NavBar from './Navigation/Navbar'
 import OpeningTimes from './OpeningTimes'
+import Contact from './Contact'
 
 
 function App() {
   return (
     <Router>
       <Routes>
+      <Route exact path="/contact"  element={<div><NavBar/><Contact /></div>}/>
       <Route exact path="/payment/:id"  element={<div><NavBar/><Payment /></div>}/>
         <Route exact path="/"  element={<div><NavBar/><HomePage /></div>}/>
         <Route exact path="/login" element={<div><NavBar/><Login /></div>}/>
