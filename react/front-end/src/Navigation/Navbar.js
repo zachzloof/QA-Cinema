@@ -52,7 +52,7 @@ function Navbar() {
               <li className="nav-link">
                 <a href="http://localhost:3000/newReleases">
                   <i className="bx bx-bell icon"></i>
-                  <span className="text nav-text">Upcomming</span>
+                  <span className="text nav-text">Upcoming</span>
                 </a>
               </li>
 
@@ -98,6 +98,12 @@ function Navbar() {
                 <a href="http://localhost:3000/openingTimes">
                   <i className="bx bx-wallet icon"></i>
                   <span className="text nav-text">Opening Times</span>
+                </a>
+              </li>
+              <li className="nav-link">
+                <a href="http://localhost:3000/contact">
+                  <i className="bx bx-wallet icon"></i>
+                  <span className="text nav-text">Contact Us</span>
                 </a>
               </li>
             </ul>
