@@ -5,7 +5,7 @@ export default function DirectorsBox() {
   return (
     <body>
       <div class="showcase">
-        <large>Directors Box</large>
+        <large>Deluxe Screen</large>
       </div>
       <div>
         <div class="container">
