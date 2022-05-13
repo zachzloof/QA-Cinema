@@ -4,35 +4,38 @@ import { useParams } from "react-router-dom";
 
 function Search() {
 
-    let [responseData, setResponseData] = useState('')
-    let length;
+    let [responseData, setResponseData] = useState([]);
     const {movie} = useParams();
-    let array;
 
     useEffect(() => {
         axios.get(`http://www.omdbapi.com/?s=${movie}&apikey=3c79b15f`)
         .then((response)=>{
-            setResponseData = response.data.Search[0].Title
-            console.log(setResponseData);
-            length = response.data.Search.length;
-            array = response.data.Search
-            //console.log(response.data.Search[0].Poster)
-           // console.log(array)
+            console.log(response.data);
+            setResponseData(response.data.Search);
+            console.log(response.data.Search[0])
            
 
         })
         .catch((error) => {
             console.log(error)
         })
-     }, [movie, length])
+     }, [movie])
      
      return(
         <div style={{textAlign: "center"}}>
             <h1>SEARCH BY FILM</h1>
-            <p>{length}</p>
-            <table>
-                <tr><td>{}</td></tr>
-            </table>
+            
+            {responseData.map(data =>   
+            <table style={{border: "3px solid rgb(0, 0, 0)", marginLeft: "auto", marginRight: "auto"}}>
+                
+                <tr><td><img src={data.Poster} /></td></tr>
+                    <tr><td>{data.Title}</td></tr>
+                    <tr><td>{data.Year}</td></tr>
+                    <tr><td>{data.imdbID}</td></tr>
+                
+                </table>
+                )}
+            
         </div>
     )
 }
