@@ -31,7 +31,7 @@ function Search() {
                 <tr><td><img src={data.Poster} /></td></tr>
                     <tr><td>{data.Title}</td></tr>
                     <tr><td>{data.Year}</td></tr>
-                    <tr><td>{data.imdbID}</td></tr>
+                    <tr><td><a href={"http://localhost:3000/deepSearch/" + data.imdbID}>MORE INFO</a></td></tr>
                 
                 </table>
                 )}
