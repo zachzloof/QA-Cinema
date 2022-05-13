@@ -9,8 +9,6 @@ const Movie = () =>
     // Const for API Data
     const[avengersData, setAvengersData] =useState([]);
     //
-    const[narutoData, setNarutoData] =useState([]);
-    //
     const[batmanData, setBatmanData] =useState([]);
     //
     const[spongebobData, setSpongebobData] =useState([]);
@@ -148,6 +146,7 @@ const Movie = () =>
         .then((res)=>{
             console.log(res)
             setAvengersData(res.data) 
+            setLoaded(true)
 
            
 
@@ -161,14 +160,11 @@ const Movie = () =>
 
     // HTML section
 
-    // todo: link images to a trailer
-
 
     if(loaded){
-        return (
+        return(
 
         <>
-
         <h1> QA CINEMAS </h1>
 
          <a href="https://youtu.be/TcMBFSGVi1c" target="_blank">
@@ -265,23 +261,19 @@ const Movie = () =>
          <h4> <b>Synopsis: </b> {topgunData.Plot}</h4>
          <h4> <b>Run time: </b> {topgunData.Runtime}</h4>
          <h4> <b> Genre: </b> {topgunData.Genre}</h4>
-        
 
-          </>
-        
-    )
-        
-    }
-    else{return(
-        <h1> loading... </h1>
+        </>
+    )}
+    
+    else{
+        return(
+        <h1> what is happening </h1>
     )}
     
     
 
 
 }
-   
-
 
 
 export default Movie;
