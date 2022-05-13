@@ -12,6 +12,8 @@ import Booking from './Booking';
 import NavBar from './Navigation/Navbar'
 import OpeningTimes from './OpeningTimes'
 import Contact from './Contact'
+import Search from './Search'
+import MoreInfo from './MoreInfo'
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
     <Router>
       <Routes>
       <Route exact path="/contact"  element={<div><NavBar/><Contact /></div>}/>
+      <Route exact path="/search/:movie"  element={<div><NavBar/><Search /></div>}/>
+      <Route exact path="/deepSearch/:movie"  element={<div><NavBar/><MoreInfo /></div>}/>
       <Route exact path="/payment/:id"  element={<div><NavBar/><Payment /></div>}/>
         <Route exact path="/"  element={<div><NavBar/><HomePage /></div>}/>
         <Route exact path="/login" element={<div><NavBar/><Login /></div>}/>
