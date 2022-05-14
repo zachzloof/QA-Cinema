@@ -38,10 +38,11 @@ class DiscussionBoard extends Component {
                     {this.state.records.map((data) =>
                         (data.post == 1) &&
                         (<tr>
-                            <td><b> {data.user} </b> </td>
-                            <td> <a href={`http://localhost:4005/newLike/${data.likes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-up')}/>{data.likes}</a> </td>
-                            <td> <a href={`http://localhost:4005/newDislike/${data.dislikes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-down')}/>{data.dislikes}</a> </td>
-                            <td> {data.body} </td>
+                            <td><b> {data.user} &nbsp; &nbsp;</b> </td>
+                            <td> {data.body} &nbsp;</td>
+                            <td> <a href={`http://localhost:4005/newLike/${data.likes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-up')}/>{data.likes}</a>&nbsp; </td>
+                            <td> <a href={`http://localhost:4005/newDislike/${data.dislikes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-down')}/>{data.dislikes}</a>&nbsp; </td>
+                            
                         </tr>)
                     )
                     }
@@ -53,14 +54,15 @@ class DiscussionBoard extends Component {
                 </form>
 
                 <h3>2.What was your best cinema experience?</h3>
-                <table>
+                <table style={{marginLeft: "auto", marginRight: "auto"}}>
                     {this.state.records.map((data) =>
                         (data.post == 2) &&
                         (<tr>
-                            <td><b> {data.user} </b> </td>
-                            <td> <a href={`http://localhost:4005/newLike/${data.likes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-up')}/>{data.likes}</a> </td>
-                            <td> <a href={`http://localhost:4005/newDislike/${data.dislikes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-down')}/>{data.dislikes}</a> </td>
-                            <td> {data.body} </td>
+                            <td><b> {data.user} &nbsp; &nbsp;</b> </td>
+                            <td> {data.body} &nbsp;</td>
+                            <td> <a href={`http://localhost:4005/newLike/${data.likes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-up')}/>{data.likes}</a>&nbsp; </td>
+                            <td> <a href={`http://localhost:4005/newDislike/${data.dislikes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-down')}/>{data.dislikes}</a> &nbsp;</td>
+                            
                         </tr>)
                     )
                     }
@@ -72,14 +74,15 @@ class DiscussionBoard extends Component {
                 </form>
 
                 <h3>3. Which film are you most looking forward too?</h3>
-                <table>
+                <table style={{marginLeft: "auto", marginRight: "auto"}}>
                     {this.state.records.map((data) =>
                         (data.post == 3) &&
                         (<tr>
-                            <td><b> {data.user} </b> </td>
-                            <td> <a href={`http://localhost:4005/newLike/${data.likes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-up')}/>{data.likes}</a> </td>
-                            <td> <a href={`http://localhost:4005/newDislike/${data.dislikes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-down')}/>{data.dislikes}</a> </td>
-                            <td> {data.body} </td>
+                            <td><b> {data.user} &nbsp; &nbsp; </b> </td>
+                            <td> {data.body} &nbsp; </td>
+                            <td> <a href={`http://localhost:4005/newLike/${data.likes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-up')}/>{data.likes} </a> &nbsp;</td>
+                            <td> <a href={`http://localhost:4005/newDislike/${data.dislikes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-down')}/>{data.dislikes}</a> &nbsp;</td>
+                            
                         </tr>)
                     )
                     }
@@ -91,14 +94,15 @@ class DiscussionBoard extends Component {
                 </form>
 
                 <h3>4. MARVEL OR DC??</h3>
-                <table>
+                <table style={{marginLeft: "auto", marginRight: "auto"}}>
                     {this.state.records.map((data) =>
                         (data.post == 4) &&
                         (<tr>
-                            <td><b> {data.user} </b> </td>
-                            <td> <a href={`http://localhost:4005/newLike/${data.likes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-up')}/>{data.likes}</a> </td>
-                            <td> <a href={`http://localhost:4005/newDislike/${data.dislikes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-down')}/>{data.dislikes}</a> </td>
-                            <td> {data.body} </td>
+                            <td><b> {data.user} &nbsp; &nbsp; </b> </td>
+                            <td> {data.body}  &nbsp;</td>
+                            <td> <a href={`http://localhost:4005/newLike/${data.likes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-up')}/>{data.likes}</a> &nbsp; </td>
+                            <td> <a href={`http://localhost:4005/newDislike/${data.dislikes}/${data.id}`}><FontAwesomeIcon icon={solid('thumbs-down')}/>{data.dislikes}</a> &nbsp; </td>
+                            
                         </tr>)
                     )
                     }

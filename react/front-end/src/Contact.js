@@ -23,7 +23,7 @@ function Contact() {
         } else if (body == "") {
             alert("PLEASE ENTER A MESSAGE")
         } else {
-            emailjs.sendForm('service_xsd1f7m', 'template_t3nt2zr', form.current, '1jYw_FThaeEzl3l6g')
+            emailjs.sendForm('service_3db4zda', 'template_t3nt2zr', form.current, '1jYw_FThaeEzl3l6g')
                 .then((result) => {
                     console.log(result.text);
                 }, (error) => {

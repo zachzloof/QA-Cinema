@@ -8,7 +8,7 @@ import { Card, Container, Col, Row } from 'react-bootstrap';
 
 export default function Screens() {
   return (
-    <body>
+    <body style={{marginLeft: "8%", marginRight: "auto"}}>
       <Container style={{ width: '85%' }}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet leo congue, suscipit leo vel, sagittis ipsum. Integer pulvinar lorem odio, ac fringilla justo cursus at. Aenean eget tempor orci. Suspendisse ultricies faucibus bibendum. Nam ut faucibus arcu, a pretium ipsum. Suspendisse eget rutrum leo, vitae faucibus ante. Praesent finibus gravida tellus malesuada sollicitudin. Etiam ullamcorper leo rhoncus eleifend dapibus.
 

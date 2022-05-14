@@ -14,12 +14,14 @@ import OpeningTimes from './OpeningTimes'
 import Contact from './Contact'
 import Search from './Search'
 import MoreInfo from './MoreInfo'
+import Screens from './screens'
 
 
 function App() {
   return (
     <Router>
       <Routes>
+      <Route exact path="/screens"  element={<div><NavBar/><Screens /></div>}/>
       <Route exact path="/contact"  element={<div><NavBar/><Contact /></div>}/>
       <Route exact path="/search/:movie"  element={<div><NavBar/><Search /></div>}/>
       <Route exact path="/deepSearch/:movie"  element={<div><NavBar/><MoreInfo /></div>}/>
