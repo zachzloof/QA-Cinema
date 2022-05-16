@@ -45,3 +45,20 @@ background{
 #movie-title{
   color:cornflowerblue
 }
+
+
+
+/* classifications */
+
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content:left;
+
+  img{
+    max-width:
+
+  }
+
+}

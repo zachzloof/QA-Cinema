@@ -7,6 +7,7 @@ import BadPass from './BadPass';
 import Register from './Register';
 import DiscussionBoard from './DiscussionBoard';
 import Movie from './Components/Movie';
+import Classification from './Components/Classification/Classification';
 
 // Movie listing section
 
@@ -23,6 +24,8 @@ function App() {
         <Route exact path="/register" element={<div><Register/></div>}/>
         <Route exact path="/discussionBoard" element={<div><DiscussionBoard/></div>}/>
         <Route exact path="/listings" element={<div><Movie/></div>}/>
+        <Route exact path="/classification" element={<div><Classification/></div>}/>
+    
 
         </Routes>
     </Router>
