@@ -3,7 +3,7 @@ import Logo from './Logo.png'
 function Header() {
 
     return (
-        <div style={{ backgroundColor: "#002730", height: "120px"}}>
+        <header style={{ backgroundColor: "#002730", height: "120px", marginLeft: "8%", marginRight: "auto"}}>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-2">
@@ -26,7 +26,7 @@ function Header() {
                     {/* </div> */}
                 </div>
             </div>
-        </div>
+        </header>
     )
 
 }
