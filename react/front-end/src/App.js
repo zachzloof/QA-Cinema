@@ -8,6 +8,7 @@ import Register from './Register';
 import DiscussionBoard from './DiscussionBoard';
 import Movie from './Components/Movie';
 import Classification from './Components/Classification/Classification';
+import NewMovie from './Components/NewMovie';
 
 // Movie listing section
 
@@ -25,9 +26,13 @@ function App() {
         <Route exact path="/discussionBoard" element={<div><DiscussionBoard/></div>}/>
         <Route exact path="/listings" element={<div><Movie/></div>}/>
         <Route exact path="/classification" element={<div><Classification/></div>}/>
+        <Route exact path="newlistings" element={<div><NewMovie/></div>}/>
+        
+      </Routes>  
     
 
-        </Routes>
+      
+
     </Router>
   );
 }
