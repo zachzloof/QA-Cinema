@@ -167,7 +167,7 @@ const Movie = () =>
         <>
         <h1> QA CINEMAS </h1>
 
-         <a href="https://youtu.be/TcMBFSGVi1c" target="_blank">
+         <a href="/newlistings/Avengers" target="_blank">
          <img src={avengersData.Poster} alt="avengers" id="avengers" /> </a>
          <h1> {avengersData.Title}</h1>
          <h4> <b>Directors:</b> {avengersData.Director} </h4>
@@ -176,7 +176,7 @@ const Movie = () =>
          <h4> <b>Run time:</b> {avengersData.Runtime}</h4>
          <h4> <b> Genre: </b> {avengersData.Genre}</h4>
          
-         <a href="https://youtu.be/mqqft2x_Aa4" target="_blank"> 
+         <a href="/newlistings/Batman" target="_blank"> 
          <img src={batmanData.Poster} alt="batman" id="batman" /> </a>
          <h1> {batmanData.Title}</h1>
          <h4> <b>Directors:</b> {batmanData.Director} </h4>
@@ -187,7 +187,7 @@ const Movie = () =>
          
          
 
-         <a href="https://youtu.be/aWzlQ2N6qqg" target="_blank">
+         <a href="/newlistings/DrStrange" target="_blank">
          <img src={drstrangeData.Poster} alt="drstrange" id="drstrange" />  </a>
          <h1> {drstrangeData.Title}</h1>
          <h4> <b>Directors:</b> {drstrangeData.Director} </h4>

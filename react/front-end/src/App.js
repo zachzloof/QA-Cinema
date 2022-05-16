@@ -9,6 +9,9 @@ import DiscussionBoard from './DiscussionBoard';
 import Movie from './Components/Movie';
 import Classification from './Components/Classification/Classification';
 import NewMovie from './Components/NewMovie';
+import AvengersDetails from './Components/MovieDetails/AvengersDetails';
+import BatmanDetails from './Components/MovieDetails/BatmanDetails';
+import DrStrangeDetails from './Components/MovieDetails/DrStrangeDetails';
 
 // Movie listing section
 
@@ -27,6 +30,9 @@ function App() {
         <Route exact path="/listings" element={<div><Movie/></div>}/>
         <Route exact path="/classification" element={<div><Classification/></div>}/>
         <Route exact path="newlistings" element={<div><NewMovie/></div>}/>
+        <Route exact path="/newlistings/Avengers" element={<div><AvengersDetails/></div>}/>
+        <Route exact path="/newlistings/Batman" element={<div><BatmanDetails/></div>}/>
+        <Route exact path="/newlistings/DrStrange" element={<div><DrStrangeDetails/></div>}/>
         
       </Routes>  
     
