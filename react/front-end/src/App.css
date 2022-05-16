@@ -55,10 +55,21 @@ background{
   display: flex;
   align-items: center;
   justify-content:left;
+}
 
-  img{
-    max-width:
+
+  .img-col{
+    justify-content: center;
+
 
   }
 
-}
+
+  .img-col{
+    font-size: medium;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+
+  }
+
+  

@@ -9,16 +9,18 @@ const Classification = () => {
         <> 
         <h1> Age Rating and Classification</h1>
 
-        <p> QA Cinema follows a strict age policy for its films under the BFFC. For entry to age-restricted films it is required to bring proof of age. 
-        Please see the information on age guidelines below </p>
+        <p> QA Cinema follows a strict age rating classificatiom for its films under the BFFC. There are 7 categories in total, please see the guidelines for the official definition of these categories below. 
+        For further information please visit the BFFS's  <a href="https://www.bbfc.co.uk"> website. </a> 
+        With that in mind, for entry to age-restrsicted films proof of age is an essential requirement.
+        </p>
 
-
+        
         <div class="container"> 
            <div class="img-col"></div>
               <img src={"https://th.bing.com/th/id/OIP.xLCTviBMnJApAuO8o2aOEgHaF6?w=215&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"} alt="universal logo " id="universal-logo" /> 
 
            <div class ="text-col"> </div>
-           <h1> Universal </h1>
+           <p> A U film should be suitable for audiences aged four years and over, although it is impossible to predict what might upset any particular child.</p>
            
            
         </div>
@@ -27,7 +29,7 @@ const Classification = () => {
               <img src={"data:image/png;base64,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"} alt="pg logo" id="pg-logo"/>
 
             <div class="text-col"> </div>  
-            <h1> Parental Guidance </h1>
+            <p> General viewing, but some scenes may be unsuitable for young children. A PG film should not unsettle a child aged around eight or older. Unaccompanied children of any age may watch, but parents are advised to consider whether the content may upset younger, or more sensitive, children. </p>
 
 
         </div>
@@ -38,18 +40,36 @@ const Classification = () => {
             
 
             <div class="text-col"></div>
-            <h1> No one younger than 12 unless acompannied by an adult</h1>
+            <p> Films classified 12A and video works classified 12 contain material that is not generally suitable for children aged under 12. No one younger than 12 may see a 12A film in a cinema unless accompanied by an adult. Adults planning to take a child under 12 to view a 12A film should consider whether the film is suitable for that child. To help them decide, we recommend that they check the Ratings Info for that film in advance. No one younger than 12 may rent or buy a 12 rated video work.</p>
 
         </div>
+        <div class="container"> 
+            <div class="img-col"></div>
+              <img src={"https://vignette.wikia.nocookie.net/rating-system/images/8/84/BBFC_12.svg/revision/latest/scale-to-width-down/216?cb=20161112011405"} alt="12 logo" id="12-logo"/>
+
+            
+            <div class="text-col"></div>
+               <p> Films classified 12A and video works classified 12 contain material that is not generally suitable for children aged under 12. No one younger than 12 may see a 12A film in a cinema unless accompanied by an adult. Adults planning to take a child under 12 to view a 12A film should consider whether the film is suitable for that child. To help them decide, we recommend that they check the Ratings Info for that film in advance. No one younger than 12 may rent or buy a 12 rated video work.</p>
+
+
+
+         
+           
+        
+        
+        
+        
+        </div>    
+
         <div class="container"> 
           <div class="img-col"></div>
             <img src={"data:image/png;base64,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"} alt="15 logo" id="15-logo" />
             
-
+     
 
 
           <div class="text-col"></div>  
-          <h1> No one younger than 15 can see this film</h1>
+          <p> No one younger than 15 may see a 15 film in a cinema. No one younger than 15 may rent or buy a 15 rated video work.</p>
         
         
         </div>
@@ -60,7 +80,7 @@ const Classification = () => {
 
 
            <div class="text-col"></div>
-           <h1> No one younger than 18 may see this film</h1>
+           <p> No one younger than 18 may see an 18 film in a cinema. No one younger than 18 may rent or buy an 18 rated video work. Adults should be free to choose their own entertainment.</p>
 
 
 
@@ -74,7 +94,7 @@ const Classification = () => {
 
 
            <div class="text-col"></div>
-           <h1> Some movie classifications are yet to be confirmed.</h1>
+           <p> Some movie classifications are yet to be confirmed.</p>
 
 
 

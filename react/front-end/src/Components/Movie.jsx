@@ -265,9 +265,15 @@ const Movie = () =>
         </>
     )}
     
+
+
+
+
+
+    
     else{
         return(
-        <h1> what is happening </h1>
+        <h1> Loading data... </h1>
     )}
     
     
