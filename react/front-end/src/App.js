@@ -17,12 +17,14 @@ import MoreInfo from './MoreInfo'
 import Screens from './screens'
 import Header from './Header';
 import Footer from './Footer';
+import GettingThere from './gettingThere'
 
 
 function App() {
   return (
     <Router>
       <Routes>
+      <Route exact path="/gettingThere"  element={<div><NavBar/><Header/><GettingThere /><Footer/></div>}/>
       <Route exact path="/screens"  element={<div><NavBar/><Header/><Screens /><Footer/></div>}/>
       <Route exact path="/contact"  element={<div><NavBar/><Header/><Contact /><Footer/></div>}/>
       <Route exact path="/search/:movie"  element={<div><NavBar/><Header/><Search /><Footer/></div>}/>
