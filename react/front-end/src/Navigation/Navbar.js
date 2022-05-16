@@ -38,12 +38,6 @@ function Navbar() {
             </li>
 
             <ul className="menu-links">
-              <li className="nav-link">
-                <a href="/">
-                  <i className="bx bx-bar-chart-alt-2 icon"></i>
-                  <span className="text nav-text">Home</span>
-                </a>
-              </li>
 
               <li className="nav-link">
                 <a href="http://localhost:3000/listings">
@@ -59,12 +53,6 @@ function Navbar() {
                 </a>
               </li>
 
-              <li className="nav-link">
-                <a href="http://localhost:3000/booking">
-                  <i className="bx bx-pie-chart-alt icon"></i>
-                  <span className="text nav-text">Bookings</span>
-                </a>
-              </li>
 
               <li className="nav-link">
                 <a href="http://localhost:3000/placesToGo">
@@ -114,9 +102,9 @@ function Navbar() {
 
           <div className="bottom-content">
             <li className="">
-              <a href="http://localhost:3000/login">
+              <a href="http://localhost:4005/logout">
                 <i className="bx bx-log-out icon"></i>
-                <span className="text nav-text">Login</span>
+                <span className="text nav-text">logout</span>
               </a>
             </li>
 
