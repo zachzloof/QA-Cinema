@@ -29,13 +29,7 @@ function Navbar() {
 
         <div className="menu-bar">
           <div className="menu">
-            <li className="search-box">
-              <i className="bx bx-search icon"></i>
-              <form action="http://localhost:4005/search" method="post">
-              <input type="text" name="input" placeholder="Search Term" />
-              <button onClick="submit">SEARCH</button>
-              </form>
-            </li>
+            
 
             <ul className="menu-links">
 
@@ -95,6 +89,13 @@ function Navbar() {
                 <a href="http://localhost:3000/contact">
                   <i className="bx bx-wallet icon"></i>
                   <span className="text nav-text">Contact Us</span>
+                </a>
+              </li>
+
+              <li className="nav-link">
+                <a href="http://localhost:3000/aboutUs">
+                  <i className="bx bx-wallet icon"></i>
+                  <span className="text nav-text">About Us</span>
                 </a>
               </li>
             </ul>
