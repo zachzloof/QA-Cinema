@@ -43,13 +43,15 @@ const Booking = () => {
             Student tickets: £15.50<input type="number" value={student} onChange={(e) => setStudent(e.target.value)} placeholder="STUDENT: £15.50" />   <br />
             Adult: £17.99<input type="number" value={adult} onChange={(e) => setAdult(e.target.value)} placeholder="ADULT: 17.99" />  <br />
             Screen: <select value={screen} onChange={(e) => setScreen(e.target.value)}>
-                <option>standard</option>
+            <option></option>
+                <option selected="selected">standard</option>
                 <option>deluxe</option>
             </select>
             <br />
 
             movie:  <select value={movie} onChange={(e) => setMovie(e.target.value)} >
-                <option>Doctor Strange - Multiverse of Madness</option>
+            <option></option>
+                <option selected="selected">Doctor Strange - Multiverse of Madness</option>
                 <option>Fantastic Beasts - The Secrets of Dumbledore</option>
                 <option>The Batman</option>
                 <option>Spiderman - No Way Home</option>
@@ -58,6 +60,7 @@ const Booking = () => {
             <br />
 
             date: <select value={date} onChange={(e) => setDate(e.target.value)}>
+            <option></option>
             <option>23/05/2022</option>
             <option>24/05/2022</option>
             <option>25/05/2022</option>
@@ -71,7 +74,8 @@ const Booking = () => {
             <br />
 
             time: <select value={time} onChange={(e) => setTime(e.target.value)}>
-            <option>16:00</option>
+            <option></option>
+            <option selected="selected">16:00</option>
             <option>18:00</option>
             <option>20:00</option>
             <option>22:00</option>
