@@ -3,8 +3,8 @@ import { Container, Row, Col, Card, Button, CardGroup } from 'react-bootstrap';
 
 export default function AboutPage() {
   return (
-    <body>
-      <Container>
+    <body style={{ marginLeft: "8%", marginRight: "auto"}}>
+      <Container >
         <Row>
           <Col>
             <h1><center> About Us </center></h1>
@@ -15,8 +15,8 @@ export default function AboutPage() {
       <Row><br /></Row>
 
       <Container>
-        <Row>
-          <Card style={{ width: '90%' }}>
+        <Row style={{ width: '90%' }}>
+          <Card >
             <Card.Header as="h5">Back-End</Card.Header>
             <Card.Body>
               <Card.Title>Zachary Zloof</Card.Title>
@@ -28,8 +28,8 @@ export default function AboutPage() {
             </Card.Body>
           </Card>
         </Row>
-        <Row>
-          <Card style={{ width: '90%' }}>
+        <Row style={{ width: '90%' }}>
+          <Card>
             <Card.Header as="h5">Front-End</Card.Header>
             <Card.Body>
               <Card.Title>Syed Shamil Ali</Card.Title>
