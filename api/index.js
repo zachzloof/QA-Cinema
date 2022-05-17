@@ -97,6 +97,13 @@ app.post("/getPrice", function (req, res) {
     
 });
 
+app.get("/getTickets", function (req, res) {
+    db.query(`SELECT * FROM payments where user = "${user}"`, function (err, results) {
+        res.send(results)
+    })
+    
+});
+
 app.post("/processComment/:x", function (req, res) {
     let x = req.params.x;
     let body = req.body.comment1;
