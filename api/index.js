@@ -20,6 +20,12 @@ let db = mysql.createConnection(
 
 db.connect();
 
+app.get("/logout", function(req, res) {
+    user = "guest";
+    res.redirect("http://localhost:3000/");
+    res.end();
+})
+
 app.post("/processLogin", function (req, res) {
 
     let pass = req.body.password;
@@ -47,11 +53,15 @@ app.post("/processBooking", function (req, res) {
     let children = parseInt(req.body.children);
     let students = parseInt(req.body.student);
     let adults = parseInt(req.body.adult);
+    let movie = req.body.movie;
+    let time = req.body.time;
+    let date = req.body.date;
+    let screen = req.body.screen;
     console.log(children);
     console.log(students);
     console.log(adults);
-    let price= (adults * 17.99) + (students * 15.50) + (children * 13.55);
-    db.query(`INSERT INTO payments (user, cost, children, students, adults, status) VALUES ("${user}", ${price}, ${children}, ${students}, ${adults}, "PENDING")`, function (err, results) {
+    let price= ((adults * 17.99) + (students * 15.50) + (children * 13.55) / 1.20); //adding concession
+    db.query(`INSERT INTO payments (user, cost, children, students, adults, screen, date, movie, time, status) VALUES ("${user}", ${price}, ${children}, ${students}, ${adults}, "${screen}", "${date}", "${movie}", "${time}", "PENDING")`, function (err, results) {
         console.log(results.insertId);
         res.status(201).send({id: results.insertId});
        
