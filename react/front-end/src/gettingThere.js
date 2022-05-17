@@ -3,8 +3,8 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 
 export default function GettingThere() {
   return (
-    <body>
-      <Container>
+    <body style={{marginLeft: "8%", marginRight: "auto"}}>
+      <Container >
         <Row>
           <Col>
             <h1><center> Getting There </center></h1>

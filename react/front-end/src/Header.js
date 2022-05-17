@@ -1,18 +1,20 @@
 import Logo from './Logo.png'
+import React from 'react';
+import { Card, Button } from 'react-bootstrap';
 
 function Header() {
 
     return (
-        <header style={{ backgroundColor: "#002730", height: "120px", marginLeft: "8%", marginRight: "auto"}}>
+        <header style={{ backgroundColor: "#002730", height: "125px", marginLeft: "8%", marginRight: "auto"}}>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-2">
                         <a href="http://localhost:3000/"><img src={Logo} style={{ width: "150px", height: "150px", objectFit: "cover", objectPosition: "20% 10%" }} /></a>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <h2><u><b>Welcome to QA Cinema</b></u></h2>
-                        <h3><b>Entertainment</b> on <i>us</i></h3>
-                        <a href="http://localhost:3000/">Homepage</a> &nbsp; &nbsp; <a href="http://localhost:3000/booking">Booking</a> &nbsp; &nbsp; <a href="http://localhost:3000/myTickets">My tickets</a> &nbsp; &nbsp; <a href="http://localhost:3000/login">Login</a>&nbsp; &nbsp; <a href="http://localhost:3000/register">Register</a>
+                        <h4><b>Entertainment</b> on <i>us</i></h4>
+                        <Button href="http://localhost:3000/">Homepage</Button> &nbsp; &nbsp; <Button href="http://localhost:3000/booking">Booking</Button> &nbsp; &nbsp; <Button href="http://localhost:3000/myTickets">My tickets</Button> &nbsp; &nbsp; <Button href="http://localhost:3000/login">Login</Button>&nbsp; &nbsp; <Button href="http://localhost:3000/register">Register</Button>
                     </div>
                     {/* <div
                         style={{

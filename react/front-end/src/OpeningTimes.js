@@ -8,6 +8,7 @@ function OpeningTimes(){
         <div style={{textAlign: "center"}}>
             <h1>What times are we open?</h1>
             <h1>Check the table below!</h1>
+            <br/>
             <table style={{border: "3px solid rgb(0, 0, 0)", marginLeft: "auto", marginRight: "auto"}}>
                 <tr>
                     <td><b><u>DAY</u></b></td>
