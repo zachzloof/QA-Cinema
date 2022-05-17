@@ -45,3 +45,31 @@ background{
 #movie-title{
   color:cornflowerblue
 }
+
+
+
+/* classifications */
+
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content:left;
+}
+
+
+  .img-col{
+    justify-content: center;
+
+
+  }
+
+
+  .img-col{
+    font-size: medium;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+
+  }
+
+  
