@@ -3,33 +3,35 @@ import { Container, Row, Col, Card, Button, CardGroup } from 'react-bootstrap';
 
 export default function AboutPage() {
   return (
-    <body style={{ marginLeft: "8%", marginRight: "auto"}}>
-      <Container >
-        <Row>
-          <Col>
-            <h1><center> About Us </center></h1>
-          </Col>
-        </Row>
-      </Container>
+    <body style={{ marginTop: '20px', marginLeft: '6%' }}>
+
+      <Row>
+        <Col>
+          <h1><center> About Us </center></h1>
+        </Col>
+      </Row>
 
       <Row><br /></Row>
 
-      <Container>
-        <Row style={{ width: '90%' }}>
-          <Card >
+      <div style={{ margin: '5%' }}>
+        <Row>
+          <Card style={{ width: '90%' }}>
             <Card.Header as="h5">Back-End</Card.Header>
             <Card.Body>
               <Card.Title>Zachary Zloof</Card.Title>
               <Card.Text>
-                Hi I'm Zach and I Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem sem, lobortis sit amet neque sed, ultricies ornare eros. Duis semper semper mi. Donec tristique vulputate neque at bibendum. Vivamus mollis orci vel sem cursus, nec luctus eros tincidunt. Praesent quis erat pretium, rhoncus mi ut, maximus risus. Nulla blandit rhoncus consequat. Donec nec purus nec diam faucibus laoreet. Integer consequat, libero eget aliquet bibendum, libero orci vehicula ligula, nec molestie ante lacus id lacus. Pellentesque laoreet magna vitae semper pretium. Aliquam id varius ex. Ut vel scelerisque lacus. Nulla suscipit imperdiet convallis.
+                Hi I'm Zach and I Ut metus erat, faucibus in mauris aliquam, gravida sagittis est. Cras pellentesque justo lorem, in elementum leo accumsan a. Maecenas fermentum a risus non fringilla. Mauris volutpat finibus tortor, at commodo nisi vestibulum et. Aenean vitae pellentesque orci. Nulla ante tellus, dictum nec gravida quis, accumsan ut mauris. Morbi dignissim, libero eget tempor varius, sapien lorem porttitor ipsum, eu dictum ex metus eget neque. Sed placerat, lacus nec gravida commodo, magna lectus aliquet tortor, in semper neque libero blandit nibh. Donec vulputate ac nisl id iaculis. Morbi tincidunt nisl vel est tempus, ac gravida dui pulvinar. Quisque eu efficitur dolor.
               </Card.Text>
               <Button variant="info" href='https://www.linkedin.com/in/zach-zloof-a3a151236/' >Linked-In</Button>
               <Button variant="dark" href='https://github.com/zachzloof'>GitHub</Button>
             </Card.Body>
           </Card>
         </Row>
-        <Row style={{ width: '90%' }}>
-          <Card>
+
+        <Row><br /></Row>
+
+        <Row>
+          <Card style={{ width: '90%' }}>
             <Card.Header as="h5">Front-End</Card.Header>
             <Card.Body>
               <Card.Title>Syed Shamil Ali</Card.Title>
@@ -41,6 +43,9 @@ export default function AboutPage() {
             </Card.Body>
           </Card>
         </Row>
+
+        <Row><br /></Row>
+
         <Row>
           <Card style={{ width: '90%' }}>
             <Card.Header as="h5">UX Designer</Card.Header>
@@ -54,6 +59,9 @@ export default function AboutPage() {
             </Card.Body>
           </Card>
         </Row>
+
+        <Row><br /></Row>
+
         <Row>
           <Card style={{ width: '90%' }}>
             <Card.Header as="h5"> DevOps </Card.Header>
@@ -67,12 +75,7 @@ export default function AboutPage() {
             </Card.Body>
           </Card>
         </Row>
-      </Container>
-
-      <Container>
-
-      </Container>
-
+      </div>
     </body >
   );
 }

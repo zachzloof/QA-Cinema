@@ -6,7 +6,7 @@ function Footer() {
 
 
     return(
-        <footer style={{backgroundColor: "#002730", height: "180px", textAlign: "center", marginLeft: "8%", marginRight: "auto"}}>
+        <footer style={{backgroundColor: "#002730", height: "180px", textAlign: "center", marginLeft: "6%", marginRight: "auto"}}>
             
         <h2>QA LTD Headquarters</h2>
         <h5>International House
