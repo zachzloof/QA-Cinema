@@ -16,9 +16,7 @@ function Payment() {
     console.log(id);
 
      useEffect(() => {
-        axios.post("http://localhost:4005/getPrice", {
-            id: id
-        })
+        axios.get(`http://localhost:4005/getPrice/${id}`)
         .then((response)=>{
 
             // setResponseData(response.data[0].cost)
