@@ -47,10 +47,10 @@ router.post("/processBooking", function (req, res) { //TESTED
     let price= ((adults * 17.99) + (students * 15.50) + (children * 13.55) * 1.2); //adding concession
     db.query(`INSERT INTO payments (user, cost, children, students, adults, screen, date, movie, time, status) VALUES ("${user}", ${price}, ${children}, ${students}, ${adults}, "${screen}", "${date}", "${movie}", "${time}", "PENDING")`, function (err, results) {
         console.log(results);
-        
+        res.status(201).send({id: results.insertId});
        
     });
-    res.status(201).send({id: results.insertId});
+    
 })
 
 router.post("/registerUser", function (req, res) { //TESTED

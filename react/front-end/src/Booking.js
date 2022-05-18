@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+
 import { Button, Form } from 'react-bootstrap';
 
 
@@ -40,146 +41,94 @@ const Booking = () => {
 
     return (
 
-        <body style={{ marginTop: '20px', marginLeft: '6%', textAlign: "center" }}>
+    <body style={{ marginTop: '20px', marginLeft: '6%', textAlign: "center" }}>
 
-            <h1> BOOK YOUR JOURNEY TO ENTERTAINMENT </h1>
-            <br />
+        <h1> BOOK YOUR JOURNEY TO ENTERTAINMENT </h1>
+        <br />
 
-            <Form onSubmit={saveData} style={{ width: '60%', marginLeft: '20%', textAlign: "center" }}>
+        <Form onSubmit={saveData} style={{ width: '60%', marginLeft: '20%', textAlign: "center" }}>
 
-                <Form.Group className='mb-3'>
-                    <Form.Label>
-                        Child Ticket(s) (£13.55):
-                    </Form.Label>
-                    <Form.Control type='number' value={children} onChange={(e) => setChildren(e.target.value)} />
-                </Form.Group>
+            <Form.Group className='mb-3'>
+                <Form.Label>
+                    Child Ticket(s) (£13.55):
+                </Form.Label>
+                <Form.Control type='number' value={children} onChange={(e) => setChildren(e.target.value)} />
+            </Form.Group>
 
-                <Form.Group className='mb-3'>
-                    <Form.Label>
-                        Student Ticket(s) (£15.50):
-                    </Form.Label>
-                    <Form.Control type='number' value={student} onChange={(e) => setStudent(e.target.value)} />
-                </Form.Group>
+            <Form.Group className='mb-3'>
+                <Form.Label>
+                    Student Ticket(s) (£15.50):
+                </Form.Label>
+                <Form.Control type='number' value={student} onChange={(e) => setStudent(e.target.value)} />
+            </Form.Group>
 
-                <Form.Group className='mb-3'>
-                    <Form.Label>
-                        Adult Ticket(s) (£17.99):
-                    </Form.Label>
-                    <Form.Control type='number' value={adult} onChange={(e) => setAdult(e.target.value)} />
-                </Form.Group>
+            <Form.Group className='mb-3'>
+                <Form.Label>
+                    Adult Ticket(s) (£17.99):
+                </Form.Label>
+                <Form.Control type='number' value={adult} onChange={(e) => setAdult(e.target.value)} />
+            </Form.Group>
 
-                <Form.Group className='mb-3'>
-                    <Form.Label>
-                        Screen:
-                    </Form.Label>
-                    <Form.Select value={screen} onChange={(e) => setScreen(e.target.value)}>
-                  
-                        <option>Standard</option>
-                        <option>Deluxe</option>
-                    </Form.Select>
-                </Form.Group>
+            <Form.Group className='mb-3'>
+                <Form.Label>
+                    Screen:
+                </Form.Label>
+                <Form.Select value={screen} onChange={(e) => setScreen(e.target.value)}>
 
-                <Form.Group className='mb-3'>
-                    <Form.Label>
-                        Movie:
-                    </Form.Label>
-                    <Form.Select value={movie} onChange={(e) => setScreen(e.target.value)}>
-                        <option>Doctor Strange - Multiverse of Madness</option>
-                        <option>Fantastic Beasts - The Secrets of Dumbledore</option>
-                        <option>The Batman</option>
-                        <option>Spiderman - No Way Home</option>
-                        <option>Sonic the Hedgehog</option>
-                    </Form.Select>
-                </Form.Group>
+                    <option>Standard</option>
+                    <option>Deluxe</option>
+                </Form.Select>
+            </Form.Group>
 
-                <Form.Group className='mb-3'>
-                    <Form.Label>
-                        Date:
-                    </Form.Label>
-                    <Form.Select value={date} onChange={(e) => setScreen(e.target.value)}>
-        
-                        <option>23/05/2022</option>
-                        <option>24/05/2022</option>
-                        <option>25/05/2022</option>
-                        <option>26/05/2022</option>
-                        <option>27/05/2022</option>
-                        <option>28/05/2022</option>
-                        <option>29/05/2022</option>
-                        <option>30/05/2022</option>
-                        <option>31/05/2022</option>
-                    </Form.Select>
-                </Form.Group>
+            <Form.Group className='mb-3'>
+                <Form.Label>
+                    Movie:
+                </Form.Label>
+                <Form.Select value={movie} onChange={(e) => setScreen(e.target.value)}>
+                    <option>Doctor Strange - Multiverse of Madness</option>
+                    <option>Fantastic Beasts - The Secrets of Dumbledore</option>
+                    <option>The Batman</option>
+                    <option>Spiderman - No Way Home</option>
+                    <option>Sonic the Hedgehog</option>
+                </Form.Select>
+            </Form.Group>
 
-                <Form.Group className='mb-3'>
-                    <Form.Label>
-                        Timing:
-                    </Form.Label>
-                    <Form.Select value={time} onChange={(e) => setScreen(e.target.value)}>
-                        <option>16:00</option>
-                        <option>18:00</option>
-                        <option>20:00</option>
-                        <option>22:00</option>
-                    </Form.Select>
-                </Form.Group>
+            <Form.Group className='mb-3'>
+                <Form.Label>
+                    Date:
+                </Form.Label>
+                <Form.Select value={date} onChange={(e) => setScreen(e.target.value)}>
 
-                <Button variant="success" type="submit">
-                    Checkout!
-                </Button>
-            </Form>
+                    <option>23/05/2022</option>
+                    <option>24/05/2022</option>
+                    <option>25/05/2022</option>
+                    <option>26/05/2022</option>
+                    <option>27/05/2022</option>
+                    <option>28/05/2022</option>
+                    <option>29/05/2022</option>
+                    <option>30/05/2022</option>
+                    <option>31/05/2022</option>
+                </Form.Select>
+            </Form.Group>
 
+            <Form.Group className='mb-3'>
+                <Form.Label>
+                    Timing:
+                </Form.Label>
+                <Form.Select value={time} onChange={(e) => setScreen(e.target.value)}>
+                    <option>16:00</option>
+                    <option>18:00</option>
+                    <option>20:00</option>
+                    <option>22:00</option>
+                </Form.Select>
+            </Form.Group>
 
-
+            <Button variant="success" type="submit">
+                Checkout!
+            </Button>
+        </Form>
+        </body>)}
 
 
-            <form onSubmit={saveData}>
-            Children tickets £13.55: <input type="number" value={children} onChange={(e) => setChildren(e.target.value)} placeholder="CHILDREN: £13.55" /> <br />
-            Student tickets: £15.50<input type="number" value={student} onChange={(e) => setStudent(e.target.value)} placeholder="STUDENT: £15.50" />   <br />
-            Adult: £17.99<input type="number" value={adult} onChange={(e) => setAdult(e.target.value)} placeholder="ADULT: 17.99" />  <br />
-            Screen: <select value={screen} onChange={(e) => setScreen(e.target.value)}>
-
-                <option>standard</option>
-
-            </select>
-            <br />
-
-            movie:  <select value={movie} onChange={(e) => setMovie(e.target.value)} >
-
-                <option>Doctor Strange - Multiverse of Madness</option>
-
-                <option>Fantastic Beasts - The Secrets of Dumbledore</option>
-                <option>The Batman</option>
-                <option>Spiderman - No Way Home</option>
-                <option>Sonic the Hedgehog</option>
-            </select>
-            <br />
-
-            date: <select value={date} onChange={(e) => setDate(e.target.value)}>
-
-            <option>23/05/2022</option>
-            <option>24/05/2022</option>
-            <option>25/05/2022</option>
-            <option>26/05/2022</option>
-            <option>27/05/2022</option>
-            <option>28/05/2022</option>
-            <option>29/05/2022</option>
-            <option>30/05/2022</option>
-            <option>31/05/2022</option>
-            </select>
-            <br />
-
-            time: <select value={time} onChange={(e) => setTime(e.target.value)}>
-
-            <option>16:00</option>
-            <option>18:00</option>
-            <option>20:00</option>
-            <option>22:00</option>
-
-            </select>
-            <br />
-            <button>BOOK!</button>
-        </form> 
-        </body>
-    )
-}
 
 export default Booking;
