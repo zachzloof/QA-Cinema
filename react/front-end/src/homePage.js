@@ -7,10 +7,12 @@ import NowShowing from './nowShowing';
 function HomePage() {
   return (
 
-    <body style={{marginLeft: "8%", marginRight: "auto"}}>
+    <body style={{marginLeft: "6%", marginRight: "auto"}}>
       
       <MyCarousel/>
+      <br /> <br />
       <NowShowing/>
+      <br /> <br />
       <ComingSoon/>
 
     </body>
