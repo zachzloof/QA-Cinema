@@ -73,8 +73,8 @@ const Booking = () => {
                         Screen:
                     </Form.Label>
                     <Form.Select value={screen} onChange={(e) => setScreen(e.target.value)}>
-                        <option>Select One</option>
-                        <option selected="selected">Standard</option>
+                  
+                        <option>Standard</option>
                         <option>Deluxe</option>
                     </Form.Select>
                 </Form.Group>
@@ -84,8 +84,7 @@ const Booking = () => {
                         Movie:
                     </Form.Label>
                     <Form.Select value={movie} onChange={(e) => setScreen(e.target.value)}>
-                        <option>Select One</option>
-                        <option selected="selected">Doctor Strange - Multiverse of Madness</option>
+                        <option>Doctor Strange - Multiverse of Madness</option>
                         <option>Fantastic Beasts - The Secrets of Dumbledore</option>
                         <option>The Batman</option>
                         <option>Spiderman - No Way Home</option>
@@ -98,7 +97,7 @@ const Booking = () => {
                         Date:
                     </Form.Label>
                     <Form.Select value={date} onChange={(e) => setScreen(e.target.value)}>
-                        <option>Select One</option>
+        
                         <option>23/05/2022</option>
                         <option>24/05/2022</option>
                         <option>25/05/2022</option>
@@ -116,8 +115,7 @@ const Booking = () => {
                         Timing:
                     </Form.Label>
                     <Form.Select value={time} onChange={(e) => setScreen(e.target.value)}>
-                        <option>Select One</option>
-                        <option selected="selected">16:00</option>
+                        <option>16:00</option>
                         <option>18:00</option>
                         <option>20:00</option>
                         <option>22:00</option>
@@ -133,7 +131,7 @@ const Booking = () => {
 
 
 
-            {/* <form onSubmit={saveData}>
+            <form onSubmit={saveData}>
             Children tickets £13.55: <input type="number" value={children} onChange={(e) => setChildren(e.target.value)} placeholder="CHILDREN: £13.55" /> <br />
             Student tickets: £15.50<input type="number" value={student} onChange={(e) => setStudent(e.target.value)} placeholder="STUDENT: £15.50" />   <br />
             Adult: £17.99<input type="number" value={adult} onChange={(e) => setAdult(e.target.value)} placeholder="ADULT: 17.99" />  <br />
