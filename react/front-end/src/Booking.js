@@ -11,10 +11,10 @@ const Booking = () => {
     const [children, setChildren] = useState(0);
     const [student, setStudent] = useState(0);
     const [adult, setAdult] = useState(0);
-    const [screen, setScreen] = useState("");
-    const [movie, setMovie] = useState("");
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
+    const [screen, setScreen] = useState("standard");
+    const [movie, setMovie] = useState("Doctor Strange - Multiverse of Madness");
+    const [date, setDate] = useState("23/05/2022");
+    const [time, setTime] = useState("16:00");
 
     const navigate = useNavigate();
 
@@ -43,15 +43,14 @@ const Booking = () => {
             Student tickets: £15.50<input type="number" value={student} onChange={(e) => setStudent(e.target.value)} placeholder="STUDENT: £15.50" />   <br />
             Adult: £17.99<input type="number" value={adult} onChange={(e) => setAdult(e.target.value)} placeholder="ADULT: 17.99" />  <br />
             Screen: <select value={screen} onChange={(e) => setScreen(e.target.value)}>
-            <option></option>
-                <option selected="selected">standard</option>
+                <option>standard</option>
                 <option>deluxe</option>
             </select>
             <br />
 
             movie:  <select value={movie} onChange={(e) => setMovie(e.target.value)} >
-            <option></option>
-                <option selected="selected">Doctor Strange - Multiverse of Madness</option>
+            
+                <option>Doctor Strange - Multiverse of Madness</option>
                 <option>Fantastic Beasts - The Secrets of Dumbledore</option>
                 <option>The Batman</option>
                 <option>Spiderman - No Way Home</option>
@@ -60,7 +59,7 @@ const Booking = () => {
             <br />
 
             date: <select value={date} onChange={(e) => setDate(e.target.value)}>
-            <option></option>
+
             <option>23/05/2022</option>
             <option>24/05/2022</option>
             <option>25/05/2022</option>
@@ -74,8 +73,7 @@ const Booking = () => {
             <br />
 
             time: <select value={time} onChange={(e) => setTime(e.target.value)}>
-            <option></option>
-            <option selected="selected">16:00</option>
+            <option>16:00</option>
             <option>18:00</option>
             <option>20:00</option>
             <option>22:00</option>
