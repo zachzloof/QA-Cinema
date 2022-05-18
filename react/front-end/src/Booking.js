@@ -84,7 +84,7 @@ const Booking = () => {
                 <Form.Label>
                     Movie:
                 </Form.Label>
-                <Form.Select value={movie} onChange={(e) => setScreen(e.target.value)}>
+                <Form.Select value={movie} onChange={(e) => setMovie(e.target.value)}>
                     <option>Doctor Strange - Multiverse of Madness</option>
                     <option>Fantastic Beasts - The Secrets of Dumbledore</option>
                     <option>The Batman</option>
@@ -97,7 +97,7 @@ const Booking = () => {
                 <Form.Label>
                     Date:
                 </Form.Label>
-                <Form.Select value={date} onChange={(e) => setScreen(e.target.value)}>
+                <Form.Select value={date} onChange={(e) => setDate(e.target.value)}>
 
                     <option>23/05/2022</option>
                     <option>24/05/2022</option>
@@ -115,7 +115,7 @@ const Booking = () => {
                 <Form.Label>
                     Timing:
                 </Form.Label>
-                <Form.Select value={time} onChange={(e) => setScreen(e.target.value)}>
+                <Form.Select value={time} onChange={(e) => setTime(e.target.value)}>
                     <option>16:00</option>
                     <option>18:00</option>
                     <option>20:00</option>
