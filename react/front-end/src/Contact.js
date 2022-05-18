@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { Button, Form } from 'react-bootstrap';
 
 function Contact() {
     const form = useRef();
@@ -35,23 +36,34 @@ function Contact() {
 
 
     return (
-        <div style={{ textAlign: "center", marginLeft: "8%", merginRight: "auto" }}>
+        <body style={{ marginTop: '20px', marginLeft: '6%', textAlign: "center" }}>
             <h1>Feel free to contact us!</h1>
-            <h4>Below you will find a form and a physical address</h4>
-            <h6>We will respond to emails within 72 hours, and reply to mail within 2 working days of us receiving them</h6>
-            <form ref={form} onSubmit={sendEmail}>
-                <label>Name</label> <br />
-                <input type="text" name="user_name" /> <br />
-                <label>Email</label> <br />
-                <input type="email" name="user_email" /> <br />
-                <label>Subject</label> <br />
-                <input type="text" name="subject" /> <br />
-                <label>Message</label> <br />
-                <textarea name="message" /> <br />
-                <input type="submit" value="Send" />
-            </form>
-            <p>Headquarters address:  3rd Floor, International House, 1 St Katharine's Way, London E1W 1UN</p>
-        </div>
+            <h4>Please complete the form below</h4>
+            <h6>We aim to respond to emails within 72 hours</h6>
+<br />
+
+            <Form style={{ width: '60%', marginLeft: '20%', textAlign: "center" }} ref={form} onSubmit={sendEmail}>
+                <Form.Group className='mb-3'>
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control type="text" name="user_name" placeholder='Please enter your name' />
+                </Form.Group>
+                <Form.Group className='mb-3'>
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" name="user_email" />
+                </Form.Group>
+                <Form.Group className='mb-3'>
+                    <Form.Label>Subject</Form.Label>
+                    <Form.Control type="text" name="subject" />
+                </Form.Group>
+                <Form.Group className='mb-3'>
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control as='textarea' rows='3' name="message" />
+                </Form.Group>
+                <Button type='submit' variant='primary'>
+                    Send
+                </Button>
+            </Form>
+        </body>
     );
 };
 
