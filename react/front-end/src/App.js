@@ -28,12 +28,14 @@ import MorbiusDetails from './Components/MovieDetails/MorbiusDetails';
 import SonicDetails from './Components/MovieDetails/SonicDetails';
 
 import AboutUs from './aboutPage'
+import Classification from './Components/Classification/Classification'
 
 
 function App() {
   return (
     <Router>
       <Routes>
+      <Route exact path="/classifications"  element={<div><NavBar/><Header/><Classification /><Footer/></div>}/>
       <Route exact path="/aboutUs"  element={<div><NavBar/><Header/><AboutUs /><Footer/></div>}/>
       <Route exact path="/myTickets"  element={<div><NavBar/><Header/><MyTickets /><Footer/></div>}/>
       <Route exact path="/gettingThere"  element={<div><NavBar/><Header/><GettingThere /><Footer/></div>}/>
