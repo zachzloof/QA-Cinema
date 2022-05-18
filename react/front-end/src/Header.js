@@ -1,6 +1,6 @@
 import Logo from './Logo.png'
 import React from 'react';
-import { Button, ButtonGroup, Col, Container, Row, Form, FormControl } from 'react-bootstrap';
+import { Button, ButtonGroup, Col, Container, Row, Form } from 'react-bootstrap';
 
 function Header() {
 
