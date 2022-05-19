@@ -15,7 +15,7 @@ export default function MyCarousel() {
           <Carousel.Caption>
             <h3>Doctor Strange - Multiverse of Madness</h3>
             <p>A strange doctor does a madness in the multiverse...</p>
-            <Button variant='light'> Book Now </Button>
+            <Button variant='light' href='http://localhost:3000/booking'> Book Now </Button>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -30,7 +30,7 @@ export default function MyCarousel() {
           <Carousel.Caption>
             <h3>Fantastic Beasts - The Secrets of Dumbledore</h3>
             <p>A fantastic beast reveals all of dumbledore's dirty secrets...</p>
-            <Button variant='light'> Book Now </Button>
+            <Button variant='light' href='http://localhost:3000/booking'> Book Now </Button>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -45,7 +45,7 @@ export default function MyCarousel() {
           <Carousel.Caption>
             <h3>The Batman</h3>
             <p>A man falls in love with a bat and a woman falls in love with a cat...</p>
-            <Button variant='light'> Book Now </Button>
+            <Button variant='light' href='http://localhost:3000/booking'> Book Now </Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

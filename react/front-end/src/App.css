@@ -81,4 +81,14 @@ background{
 
   }
 
+  .form-control{
+    background-color: #282c34;
+    color: #6d6d6d;
+  }
+
+  .form-select{
+    background-color: #282c34;
+    color: #6d6d6d;
+  }
+
   
