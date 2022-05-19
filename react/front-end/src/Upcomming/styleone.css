@@ -30,6 +30,6 @@
 h1 {
     text-align: center;
 }
-.image:hover {
+.imageOne:hover {
     transform: scale(1.1);
 }
