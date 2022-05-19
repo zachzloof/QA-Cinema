@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+
 export default function GettingThere() {
   return (
     <body style={{ marginTop: '20px', marginLeft: '10%', paddingRight: '20px' }}>
@@ -23,19 +26,19 @@ export default function GettingThere() {
           <Col>
             <h2>How to get to QA Cinema <br /></h2>
             <br />
-            <h4>'Icon' Public transport <br /></h4>
+            <h4> Public transport <br /></h4>
             <br />
-            <b>Stations:<br /></b>
+            <b><FontAwesomeIcon icon={solid('train-subway')}/> &nbsp; Stations:<br /></b>
 
             Tower Hill (Circle / District line) - 5-10 min walk <br />
             Aldgate (Metropolitan line) - 15 min walk <br />
             London Bridge (Jubilee / Northern / Overground) - 15-20 min walk <br />
             <br />
-            <b>Bus:<br /></b>
+            <b><FontAwesomeIcon icon={solid('bus')}/> &nbsp; Bus:<br /></b>
 
             Bus Routes that stop near the cinema - 15, 42, 78, 100, 343.<br />
             <br />
-            <h4>'Icon' Disabled Access <br /></h4>
+            <h4><FontAwesomeIcon icon={solid('wheelchair')}/> &nbsp; Disabled Access <br /></h4>
             <br />
             <b>Disabled Access:<br /></b>
             Cinema is fully accessible with ramps and lifts within the building.

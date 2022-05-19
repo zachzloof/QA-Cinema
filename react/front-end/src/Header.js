@@ -9,13 +9,13 @@ function Header() {
             <Container fluid>
                 <Row className='d-flex align-items-center justify-content-center'>
                     <Col>
-                        <a href="http://localhost:3000/"><img src={Logo} style={{ width: "215px", height: "70px", paddingLeft: "25px" }} /></a>
+                        <a href="http://localhost:3000/"><img src={Logo} alt={'QA Cinema Logo'} style={{ width: "215px", height: "70px", paddingLeft: "25px" }} /></a>
                     </Col>
                     <Col md={5}>
                         <ButtonGroup>
                             {/* <Button href="http://localhost:3000/">Homepage</Button> &nbsp; &nbsp; */}
                             <Button variant='info' href="http://localhost:3000/booking">Booking</Button> &nbsp; &nbsp;
-                            <Button variant='info' href="http://localhost:3000/myTickets">My tickets</Button> &nbsp; &nbsp;
+                            <Button variant='info' href="http://localhost:3000/myTickets">My Tickets</Button> &nbsp; &nbsp;
                             <Button variant='info' href="http://localhost:3000/login">Login</Button>&nbsp; &nbsp;
                             <Button variant='info' href="http://localhost:3000/register">Register</Button>
                         </ButtonGroup>
