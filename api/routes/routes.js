@@ -9,7 +9,7 @@ router.use(function (req, res, next) { req.header("Access-Control-Allow-Origin",
 
 router.get("/logout", function(req, res) { //tested
     user = "guest";
-    res.status(200).send().res.redirect("http://localhost:3000/");
+    res.status(302).redirect("http://localhost:3000/");
 })
 
 router.post("/processLogin", function (req, res) { //TESTED
@@ -20,14 +20,14 @@ router.post("/processLogin", function (req, res) { //TESTED
         console.log(results)
         if (results.length != 1) {
             console.log(`username is wrong, please try again`);
-            res.status(400).send().redirect(`http://localhost:3000/login/baduser`)
+            res.status(302).redirect("http://localhost:3000/")
         } else if (results[0].password == pass) {
             user = req.body.username;
             console.log(`${user} is logged in`);
-            res.status(201).send().redirect(`http://localhost:3000/`)
+            res.status(302).redirect("http://localhost:3000/");
         } else {
             console.log(`password is wrong, please try again`);
-            res.status(400).send().redirect(`http://localhost:3000/login/badpass`)
+            res.status(302).redirect("http://localhost:3000/")
         }
     });
 
@@ -59,7 +59,7 @@ router.post("/registerUser", function (req, res) { //TESTED
     db.query(`INSERT INTO users (username, password) VALUES ("${username}", "${pass}")`, function (err, results) {
         
     });
-    res.status(201).send().redirect("http://localhost:3000/login")
+    res.status(301).redirect("http://localhost:3000/login")
 })
 
 router.get("/getComments", function (req, res) { //TESTED
@@ -71,7 +71,7 @@ router.get("/getComments", function (req, res) { //TESTED
 router.post("/search", function (req, res) { //TESTED
     let movie = req.body.input;
     console.log(movie);
-    res.status(201).send().redirect(`http://localhost:3000/search/${movie}`)}
+    res.status(302).redirect(`http://localhost:3000/search/${movie}`)}
 );
 
 router.get("/getPrice/:x", function (req, res) { //TESTED
@@ -93,7 +93,7 @@ router.post("/processComment/:x", function (req, res) { //TESTED
     db.query(`INSERT INTO comments (user, likes, dislikes, post, mods, body) VALUES ("${user}", 0, 0, ${x}, "OK", "${body}")`, function (err, results) {
 
     });
-    res.status(201).send().redirect("http://localhost:3000/discussionBoard")
+    res.status(302).redirect("http://localhost:3000/discussionBoard")
    
 });
 router.post("/putStatus", function (req, res) { //TESTED
@@ -112,7 +112,7 @@ router.get("/newLike/:x/:y", function (req, res) {
     let y = parseInt(req.params.y);
     db.query(`UPDATE comments SET likes=${x + 1} WHERE id = ${y}`, function (err, results) {
     });
-    res.status(200).send().redirect("http://localhost:3000/discussionBoard")
+    res.status(302).redirect("http://localhost:3000/discussionBoard")
 });
 
 router.get("/newDislike/:x/:y", function (req, res) {
@@ -120,7 +120,7 @@ router.get("/newDislike/:x/:y", function (req, res) {
     let y = parseInt(req.params.y);
     db.query(`UPDATE comments SET dislikes= ${x + 1} WHERE id = ${y}`, function (err, results) {
     });
-    res.status(200).send().redirect("http://localhost:3000/discussionBoard")
+    res.status(302).redirect("http://localhost:3000/discussionBoard")
 });
 
 module.exports = router;

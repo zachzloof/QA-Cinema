@@ -130,9 +130,9 @@ describe('QA-cinema tests', () => {
     })
 })
 it('logout test', (done) => {
-    chai.request(server).get("/logout").end((err, res) => {
+    chai.request(server).get("/logout").redirects(0).end((err, res) => {
         expect(err).to.be.null;
-        expect(res.status).to.equal(200);
+        expect(res.status).to.equal(302);
         return done();
     });
 
@@ -154,23 +154,23 @@ it('logout test', (done) => {
    
 
     it('registration post test', (done) => {
-        chai.request(server).post("/registerUser").send({
+        chai.request(server).post("/registerUser").redirects(0).send({
             username: "zach",
             password: "password"
         }).end((err, res) => {
             expect(err).to.be.null;
-            expect(res.status).to.equal(201);
+            expect(res.status).to.equal(302);
             return done();
         });
 
     })
 
     it('search test', (done) => {
-        chai.request(server).post("/search").send({
+        chai.request(server).post("/search").redirects(0).send({
             input: "batman",
         }).end((err, res) => {
             expect(err).to.be.null;
-            expect(res.status).to.equal(201);
+            expect(res.status).to.equal(302);
             return done();
         });
 
@@ -178,7 +178,7 @@ it('logout test', (done) => {
 
 
     it('process comment test', (done) => {
-        chai.request(server).post("/processComment/1").send({
+        chai.request(server).post("/processComment/1").redirects(0).send({
                     user: "zach",
                     likes: 1,
                     dislikes: 1,
@@ -187,25 +187,25 @@ it('logout test', (done) => {
                     body: "blah blah testing 1234"
         }).end((err, res) => {
             expect(err).to.be.null;
-            expect(res.status).to.equal(201);
+            expect(res.status).to.equal(302);
             return done();
         });
     
     })
 
     it('like test', (done) => {
-        chai.request(server).get("/newLike/:1/:2").end((err, res) => {
+        chai.request(server).get("/newLike/:1/:2").redirects(0).end((err, res) => {
             expect(err).to.be.null;
-            expect(res.status).to.equal(200);
+            expect(res.status).to.equal(302);
             return done();
         });
     
     })
 
     it('dislike test', (done) => {
-        chai.request(server).get("/newDislike/:1/:2").end((err, res) => {
+        chai.request(server).get("/newDislike/:1/:2").redirects(0).end((err, res) => {
             expect(err).to.be.null;
-            expect(res.status).to.equal(200);
+            expect(res.status).to.equal(302);
             return done();
         });
     
@@ -213,37 +213,37 @@ it('logout test', (done) => {
 
 
 
-    // it('validate login', (done) => {
-    //     chai.request(server).post("/processLogin").send({
-    //         username: "guest",
-    //         password: "password"
-    //     }).end((err, res) => {
-    //         expect(err).to.be.null;
-    //         expect(res.status).to.equal(201);
-    //         return done();
-    //     });
+    it('validate login', (done) => {
+        chai.request(server).post("/processLogin").redirects(0).send({
+            username: "guest",
+            password: "password"
+        }).end((err, res) => {
+            expect(err).to.be.null;
+            expect(res.status).to.equal(302);
+            return done();
+        });
 
-    // })
+    })
 
-    // it('post new booking', (done) => {
-    //     chai.request(server).post("/processLogin").send({
-    //         user: "guest",
-    //         cost: 125,
-    //         children: 2,
-    //         students: 3,
-    //         adults: 2,
-    //         screen: "standard",
-    //         date: "01/01/2022",
-    //         movie: "batman2",
-    //         time: "18:00",
-    //         status: "pending"
-    //     }).end((err, res) => {
-    //         expect(err).to.be.null;
-    //         expect(res.status).to.equal(201);
-    //         // expect(res.body).to.include({
-    //         //     id: 2
-    //         // });
-    //         return done();
-    //     });
+    it('post new booking', (done) => {
+        chai.request(server).post("/processLogin").redirects(0).send({
+            user: "guest",
+            cost: 125,
+            children: 2,
+            students: 3,
+            adults: 2,
+            screen: "standard",
+            date: "01/01/2022",
+            movie: "batman2",
+            time: "18:00",
+            status: "pending"
+        }).end((err, res) => {
+            expect(err).to.be.null;
+            expect(res.status).to.equal(302);
+            // expect(res.body).to.include({
+            //     id: 2
+            // });
+            return done();
+        });
        
-    // })
+    })
