@@ -29,13 +29,16 @@ import SonicDetails from './Components/MovieDetails/SonicDetails';
 
 import AboutUs from './aboutPage'
 import Classification from './Components/Classification/Classification'
-
+import ToDo from './ToDo/toDo'
+import Upcoming from './Upcomming/upcomming'
 
 function App() {
   return (
     <Router>
       <Routes>
       <Route exact path="/classifications"  element={<div><NavBar/><Header/><Classification /><Footer/></div>}/>
+      <Route exact path="/placesToGo"  element={<div><NavBar/><Header/><ToDo /><Footer/></div>}/>
+      <Route exact path="/newReleases"  element={<div><NavBar/><Header/><Upcoming /><Footer/></div>}/>
       <Route exact path="/aboutUs"  element={<div><NavBar/><Header/><AboutUs /><Footer/></div>}/>
       <Route exact path="/myTickets"  element={<div><NavBar/><Header/><MyTickets /><Footer/></div>}/>
       <Route exact path="/gettingThere"  element={<div><NavBar/><Header/><GettingThere /><Footer/></div>}/>
