@@ -20,14 +20,14 @@ router.post("/processLogin", function (req, res) { //TESTED
         console.log(results)
         if (results.length != 1) {
             console.log(`username is wrong, please try again`);
-            res.status(302).redirect("http://localhost:3000/")
+            res.status(302).redirect("http://localhost:3000/login/baduser")
         } else if (results[0].password == pass) {
             user = req.body.username;
             console.log(`${user} is logged in`);
             res.status(302).redirect("http://localhost:3000/");
         } else {
             console.log(`password is wrong, please try again`);
-            res.status(302).redirect("http://localhost:3000/")
+            res.status(302).redirect("http://localhost:3000/login/baduser")
         }
     });
 
