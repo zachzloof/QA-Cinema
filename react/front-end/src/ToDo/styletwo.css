@@ -1,0 +1,36 @@
+
+.imageTwo {
+    border-radius: 1rem;
+    align-content: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 0.1rem;
+    width: 15rem;
+    height: 15rem;
+    grid-column: 1;
+    grid-row: 1;
+    transition: transform .2s;
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+}
+.textTwo {
+    font-size: large;
+    justify-content: center ;
+    grid-column: 3;
+    grid-row: 1/3;
+    margin-top:0.5rem;
+}
+.boxTwo {
+    display: grid;
+    grid-template-columns: 10rem 10rem 20rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+    padding: 5px;
+}
+h1 {
+    text-align: center;
+}
+.imageTwo:hover {
+    transform: scale(1.1);
+}
