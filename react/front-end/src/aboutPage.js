@@ -14,7 +14,7 @@ export default function AboutPage() {
             <Card.Body>
               <Card.Title>Zachary Zloof</Card.Title>
               <Card.Text>
-                Hi I'm Zach and I Ut metus erat, faucibus in mauris aliquam, gravida sagittis est. Cras pellentesque justo lorem, in elementum leo accumsan a. Maecenas fermentum a risus non fringilla. Mauris volutpat finibus tortor, at commodo nisi vestibulum et. Aenean vitae pellentesque orci. Nulla ante tellus, dictum nec gravida quis, accumsan ut mauris. Morbi dignissim, libero eget tempor varius, sapien lorem porttitor ipsum, eu dictum ex metus eget neque. Sed placerat, lacus nec gravida commodo, magna lectus aliquet tortor, in semper neque libero blandit nibh. Donec vulputate ac nisl id iaculis. Morbi tincidunt nisl vel est tempus, ac gravida dui pulvinar. Quisque eu efficitur dolor.
+                I was the lead back-end programmer on this project, I was responsible for the login, forum, booking, email system, payment, search functionality and testing proceedures for the project. I was responsible for the Jira board and took on the role as scrum master, which involved overseeing the project and allocating tasks.
               </Card.Text>
               <Button variant="info" href='https://www.linkedin.com/in/zach-zloof-a3a151236/' >Linked-In</Button>
               <Button variant="dark" href='https://github.com/zachzloof'>GitHub</Button>
@@ -30,7 +30,7 @@ export default function AboutPage() {
             <Card.Body>
               <Card.Title>Syed Shamil Ali</Card.Title>
               <Card.Text>
-                Hi I'm Shamil and I Ut metus erat, faucibus in mauris aliquam, gravida sagittis est. Cras pellentesque justo lorem, in elementum leo accumsan a. Maecenas fermentum a risus non fringilla. Mauris volutpat finibus tortor, at commodo nisi vestibulum et. Aenean vitae pellentesque orci. Nulla ante tellus, dictum nec gravida quis, accumsan ut mauris. Morbi dignissim, libero eget tempor varius, sapien lorem porttitor ipsum, eu dictum ex metus eget neque. Sed placerat, lacus nec gravida commodo, magna lectus aliquet tortor, in semper neque libero blandit nibh. Donec vulputate ac nisl id iaculis. Morbi tincidunt nisl vel est tempus, ac gravida dui pulvinar. Quisque eu efficitur dolor.
+              Hi, I’m Shamil and I am the lead front-end developer. I was responsible for making the homepage, which included a brief ‘Now Showing’ and a ‘Coming Soon’ feature. I also took control of the ‘Getting There’, 'About Us' and the ‘Screens’ page, as well and styling the whole website on pages that had not been so. I implemented bootstrap into the forms and created a Logo for the company.
               </Card.Text>
               <Button variant="info" href='https://www.linkedin.com/in/syed-shamil-ali-137851146/'>Linked-In</Button>
               <Button variant="dark" href='https://github.com/shamil-ali'>GitHub</Button>
@@ -46,7 +46,7 @@ export default function AboutPage() {
             <Card.Body>
               <Card.Title>Owen Cornock</Card.Title>
               <Card.Text>
-                Hi I'm Owen and I Donec a enim eleifend, cursus odio et, ullamcorper ipsum. Curabitur facilisis diam sed ultrices fermentum. In cursus felis urna, eget ultrices nisl suscipit ac. Integer porta facilisis ante sit amet dictum. Proin sagittis turpis lorem, vel iaculis diam elementum ut. Cras feugiat vestibulum urna, tempor cursus eros. Etiam dolor sapien, ultrices quis aliquam sit amet, tempor at ipsum. Nunc nulla arcu, tincidunt nec blandit sit amet, suscipit nec felis.
+              Hi, my name is Owen, I’m a frontend programmer took control of the Navbar, upcoming listings and things to do around the area. This included styling the pages to add some visually pleasing aspects.
               </Card.Text>
               <Button variant="info" href='https://www.linkedin.com/in/owen-cornock-090a6413b/'>Linked-In</Button>
               <Button variant="dark" href='https://github.com/owencornock'>GitHub</Button>
@@ -62,7 +62,7 @@ export default function AboutPage() {
             <Card.Body>
               <Card.Title>JD Bonapos</Card.Title>
               <Card.Text>
-                Hi I'm JD and I Praesent mattis ultricies mi ut rhoncus. Vivamus ex ex, mattis id ornare ut, condimentum ullamcorper orci. In posuere ultrices eleifend. Vestibulum hendrerit ante vel posuere mattis. Proin id molestie nunc. Aenean auctor, turpis sit amet aliquet scelerisque, ex lacus interdum quam, ut dictum felis purus vel nisi. Ut varius nibh sit amet cursus congue.
+              Hey I'm JD, I was assigned lead DevOps operator for our project with the aim of enhancing our workflow and unifying the front and back-end elements of our project. My main responsibilities included creating the movie listings and classification pages as well as general product documentation.
               </Card.Text>
               <Button variant="info" href='https://www.linkedin.com/in/john-bonapos-292890228/'>Linked-In</Button>
               <Button variant="dark" href='https://github.com/jdbonapos1'>GitHub</Button>
