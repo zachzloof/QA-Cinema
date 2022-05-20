@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios, { Axios } from 'axios'
 import { useParams } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 function Payment() {
     let [responseData, setResponseData] = useState('')
@@ -11,6 +12,7 @@ function Payment() {
         currency: "GBP"
         
     };
+    const navigate = useNavigate();
 
     const {id} = useParams();
     console.log(id);
@@ -58,6 +60,7 @@ function Payment() {
                     console.log("order", order);
                     const status =  updateOrder(order);
                     console.log(status)
+                    navigate("/myTickets");
                    
                 }}
                 />

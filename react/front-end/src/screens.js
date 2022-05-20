@@ -9,15 +9,6 @@ import { Card, Container, Col, Row } from 'react-bootstrap';
 export default function Screens() {
   return (
     <body style={{ margin:'20px', marginLeft:'10%', textAlign: "center" }}>
-      <Container style={{ width: '85%' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet leo congue, suscipit leo vel, sagittis ipsum. Integer pulvinar lorem odio, ac fringilla justo cursus at. Aenean eget tempor orci. Suspendisse ultricies faucibus bibendum. Nam ut faucibus arcu, a pretium ipsum. Suspendisse eget rutrum leo, vitae faucibus ante. Praesent finibus gravida tellus malesuada sollicitudin. Etiam ullamcorper leo rhoncus eleifend dapibus.
-
-        <br /><br />
-
-        Sed mi lectus, posuere et augue interdum, sodales volutpat dui. Curabitur consectetur massa augue, ac bibendum justo feugiat vel. Nam rutrum vestibulum arcu a fermentum. Vestibulum finibus augue blandit erat pulvinar tristique. Vestibulum a vehicula magna. Maecenas ipsum dui, tincidunt id lacus non, porttitor finibus nisl. Integer varius dolor eget molestie ultrices. Etiam eu faucibus diam, eu facilisis dolor. Pellentesque suscipit ligula tortor, et dapibus justo efficitur vitae.
-      </Container>
-
-      <br /><br />
 
       <Row className='d-flex justify-content-around'>
         <Col><center><h1> Standard Screen </h1></center></Col>
@@ -45,8 +36,7 @@ export default function Screens() {
             <Card.Body>
               <Card.Title>Unbeatable Immersion</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                We offer immersion like no other, you won't know where you are once you leave us.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -57,8 +47,7 @@ export default function Screens() {
             <Card.Body>
               <Card.Title>Luxurious Lobby</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Top of the range lobby with a unique variety of snacks to enjoy during the movie.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -69,8 +58,7 @@ export default function Screens() {
             <Card.Body>
               <Card.Title>World's Largest Screen</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Record breaking technology, with the worlds largest indoor cinema screen.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -106,8 +94,7 @@ export default function Screens() {
             <Card.Body>
               <Card.Title>VIP Bar</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Unlimited drinks with access to the VIP only bar.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -118,8 +105,7 @@ export default function Screens() {
             <Card.Body>
               <Card.Title>Comfort and Privacy</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Our goal is to maximise comfort and privacy so you feel like you are right at home.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -130,8 +116,7 @@ export default function Screens() {
             <Card.Body>
               <Card.Title>Dolby Cinema Sound</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Dolby Sound provides a surround sound experience that you will not get tired of.
               </Card.Text>
             </Card.Body>
           </Card>

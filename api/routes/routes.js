@@ -27,7 +27,7 @@ router.post("/processLogin", function (req, res) { //TESTED
             res.status(302).redirect("http://localhost:3000/");
         } else {
             console.log(`password is wrong, please try again`);
-            res.status(302).redirect("http://localhost:3000/login/baduser")
+            res.status(302).redirect("http://localhost:3000/login/badpass")
         }
     });
 
