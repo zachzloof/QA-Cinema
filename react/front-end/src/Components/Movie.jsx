@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import './Movie.css'
 
 
 // movie listing page using jsx
@@ -150,29 +151,29 @@ const Movie = () => {
 
 
                     <a href="/listings/Batman" target="_blank">
-                        <img src={batmanData.Poster} alt="batman" id="batman" /> </a>
+                        <img className="img-listings" src={batmanData.Poster} alt="batman" id="batman" /> </a>
                     <h1> {batmanData.Title}</h1>
 
 
 
                     <a href="/listings/DrStrange" target="_blank">
-                        <img src={drstrangeData.Poster} alt="drstrange" id="drstrange" />  </a>
+                        <img className="img-listings" src={drstrangeData.Poster} alt="drstrange" id="drstrange" />  </a>
                     <h1> {drstrangeData.Title}</h1>
 
 
 
                     <a href="listings/FantasticBeasts" target="_blank">
-                        <img src={fantasticbeastsData.Poster} alt="fantasticbeasts" id="fantasticbeasts" /> </a>
+                        <img className="img-listings" src={fantasticbeastsData.Poster} alt="fantasticbeasts" id="fantasticbeasts" /> </a>
                     <h1> {fantasticbeastsData.Title}</h1>
 
 
                     <a href="/listings/Morbius" target="_blank">
-                        <img src={morbiusData.Poster} alt="morbius" id="morbius" /> </a>
+                        <img className="img-listings" src={morbiusData.Poster} alt="morbius" id="morbius" /> </a>
                     <h1> {morbiusData.Title}</h1>
 
 
                     <a href="listings/Sonic" target="_blank">
-                        <img src={sonicData.Poster} alt="sonic" id="sonic" /> </a>
+                        <img className="img-listings" src={sonicData.Poster} alt="sonic" id="sonic" /> </a>
                     <h1> {sonicData.Title}</h1>
 
 

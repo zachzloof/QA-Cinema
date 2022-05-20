@@ -8,7 +8,7 @@ function Register() {
             <Form style={{ width: '60%', marginLeft: '20%', textAlign: "center" }} action='http://localhost:4005/registerUser' method='post'>
                 <Form.Group className="mb-3">
                     <Form.Label>Username</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Username" />
+                    <Form.Control name="username" type="text" placeholder="Enter Username" />
                     <Form.Text className="text-muted">
                         Please create a unique username.
                     </Form.Text>
@@ -16,7 +16,7 @@ function Register() {
 
                 <Form.Group className="mb-3">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control name="password" type="password" placeholder="Password" />
                     <Form.Text className="text-muted">
                         Please create a password.
                     </Form.Text>

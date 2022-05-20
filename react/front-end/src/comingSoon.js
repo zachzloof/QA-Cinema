@@ -67,7 +67,7 @@ export default function ComingSoon() {
         </Card>
       </div>
       <center>
-        <Button href='#'>
+        <Button href='http://localhost:3000/newReleases'>
           See More
         </Button>
       </center>

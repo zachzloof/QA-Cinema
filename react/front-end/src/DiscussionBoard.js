@@ -58,7 +58,7 @@ class DiscussionBoard extends Component {
                         <Form.Group className='mb-3'>
                             <Form.Control type="text" name="comment1" />
                         </Form.Group>
-                        <Button variant='light'>Submit</Button>
+                        <Button variant='light' type="submit">Submit</Button>
                     </Form>
                     <br />
                     <h3>2.What was your best cinema experience?</h3>
@@ -81,7 +81,7 @@ class DiscussionBoard extends Component {
                         <Form.Group className='mb-3'>
                             <Form.Control type="text" name="comment1" />
                         </Form.Group>
-                        <Button variant='light'>Submit</Button>
+                        <Button variant='light' type="submit">Submit</Button>
                     </Form>
                     <br />
                     <h3>3. Which film are you most looking forward too?</h3>
@@ -103,7 +103,7 @@ class DiscussionBoard extends Component {
                         <Form.Group className='mb-3'>
                             <Form.Control type="text" name="comment1" />
                         </Form.Group>
-                        <Button variant='light'>Submit</Button>
+                        <Button variant='light' type="submit">Submit</Button>
                     </Form>
                     <br />
                     <h3>4. MARVEL OR DC??</h3>
@@ -125,7 +125,7 @@ class DiscussionBoard extends Component {
                         <Form.Group className='mb-3'>
                             <Form.Control type="text" name="comment1" />
                         </Form.Group>
-                        <Button variant='light'>Submit</Button>
+                        <Button variant='light' type="submit">Submit</Button>
                     </Form>
                 </div>
             </body>)

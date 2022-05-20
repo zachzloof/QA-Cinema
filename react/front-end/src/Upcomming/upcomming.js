@@ -6,7 +6,7 @@ export default function ControlledCarousel() {
 
 
     <div className='total'>
-      <h1>Upcomming Films</h1>
+      <h1>Upcoming Films</h1>
       <div className='boxOne'>
         <a href='https://www.youtube.com/watch?v=giXco2jaZ_4'>
         <img

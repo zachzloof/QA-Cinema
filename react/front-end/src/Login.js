@@ -8,7 +8,7 @@ function Login() {
       <Form style={{ width: '60%', marginLeft: '20%', textAlign: "center" }} action='http://localhost:4005/processLogin' method='post'>
         <Form.Group className="mb-3">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="text" placeholder="Enter Username" />
+          <Form.Control name= "username" type="text" placeholder="Enter Username" />
           <Form.Text className="text-muted">
             This is the Username you used to register with QA Cinema.
           </Form.Text>
@@ -16,7 +16,7 @@ function Login() {
 
         <Form.Group className="mb-3">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control name="password" type="password" placeholder="Password" />
         </Form.Group>
 
         <Button variant="success" type="submit">
